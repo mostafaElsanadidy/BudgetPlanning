@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED02F65A28A0573F003032D7 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F65928A0573F003032D7 /* CustomTabbar.swift */; };
+		ED02F65C28A065E4003032D7 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F65B28A065E3003032D7 /* AppTabBar.swift */; };
+		ED02F65E28A0674A003032D7 /* Reload.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F65D28A0674A003032D7 /* Reload.swift */; };
+		ED0940FB28D52241008180D2 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0940FA28D52241008180D2 /* CircularProgressView.swift */; };
+		ED09410028D523EC008180D2 /* MonthGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0940FE28D523EC008180D2 /* MonthGoalVC.swift */; };
+		ED09410128D523EC008180D2 /* MonthGoalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0940FF28D523EC008180D2 /* MonthGoalVC.xib */; };
+		ED0A48A728A5612E00E29E5D /* CustomizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0A48A628A5612E00E29E5D /* CustomizedTabBar.swift */; };
+		ED1EC5C828D5DEB9001F63A8 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1EC5C728D5DEB9001F63A8 /* ArcView.swift */; };
+		ED2574B328A1518300FEC730 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2574B228A1518300FEC730 /* FirstViewController.swift */; };
+		ED57417F28A257BD00969658 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57417D28A257BD00969658 /* HomeVC.swift */; };
+		ED57418028A257BD00969658 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED57417E28A257BD00969658 /* HomeVC.xib */; };
+		ED57418328A258D100969658 /* FuturePurchasesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57418128A258D100969658 /* FuturePurchasesCell.swift */; };
+		ED57418428A258D100969658 /* FuturePurchasesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED57418228A258D100969658 /* FuturePurchasesCell.xib */; };
+		ED57418828A29B9200969658 /* SecondProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57418628A29B9200969658 /* SecondProgressBar.swift */; };
+		ED57418928A29B9200969658 /* SecondProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED57418728A29B9200969658 /* SecondProgressBar.xib */; };
+		ED57419128A29EDF00969658 /* Label_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57418F28A29EDF00969658 /* Label_Ext.swift */; };
+		ED57419228A29EDF00969658 /* Btn_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57419028A29EDF00969658 /* Btn_Ext.swift */; };
+		ED58E98F28A4DB4100E65EE7 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58E98D28A4DB4000E65EE7 /* TabbarController.swift */; };
+		ED58E99C28A4F9CE00E65EE7 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED58E99B28A4F9CE00E65EE7 /* FirstViewController.xib */; };
+		ED725F4428A59662007FA711 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED725F4328A59662007FA711 /* UIViewX.swift */; };
+		ED8B0EE528A101FC0093A429 /* UIViewController+AdditionalFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0EE328A101FB0093A429 /* UIViewController+AdditionalFeatures.swift */; };
+		ED8B0EE628A101FC0093A429 /* UIView+AdditionalFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0EE428A101FC0093A429 /* UIView+AdditionalFeatures.swift */; };
+		ED94735728A444EC00BA10DD /* HomeVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94735628A444EC00BA10DD /* HomeVC+Collection.swift */; };
+		ED94735928A4450000BA10DD /* HomeVC+Delegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94735828A4450000BA10DD /* HomeVC+Delegation.swift */; };
 		ED9F09B6289F13D400672027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F09B5289F13D400672027 /* AppDelegate.swift */; };
 		ED9F09B8289F13D400672027 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F09B7289F13D400672027 /* SceneDelegate.swift */; };
 		ED9F09BA289F13D400672027 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F09B9289F13D400672027 /* ViewController.swift */; };
@@ -17,6 +41,8 @@
 		ED9F09D0289F13DF00672027 /* BudgetPlanningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F09CF289F13DF00672027 /* BudgetPlanningTests.swift */; };
 		ED9F09DA289F13E000672027 /* BudgetPlanningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F09D9289F13E000672027 /* BudgetPlanningUITests.swift */; };
 		ED9F09DC289F13E000672027 /* BudgetPlanningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F09DB289F13E000672027 /* BudgetPlanningUITestsLaunchTests.swift */; };
+		EDE1887128AD159B004D0316 /* OrderDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1886F28AD159B004D0316 /* OrderDetailsVC.swift */; };
+		EDE1887228AD159B004D0316 /* OrderDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE1887028AD159B004D0316 /* OrderDetailsVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +63,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED02F65928A0573F003032D7 /* CustomTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
+		ED02F65B28A065E3003032D7 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
+		ED02F65D28A0674A003032D7 /* Reload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reload.swift; sourceTree = "<group>"; };
+		ED0940FA28D52241008180D2 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		ED0940FE28D523EC008180D2 /* MonthGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthGoalVC.swift; sourceTree = "<group>"; };
+		ED0940FF28D523EC008180D2 /* MonthGoalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthGoalVC.xib; sourceTree = "<group>"; };
+		ED0A48A628A5612E00E29E5D /* CustomizedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTabBar.swift; sourceTree = "<group>"; };
+		ED1EC5C728D5DEB9001F63A8 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
+		ED2574B228A1518300FEC730 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		ED57417D28A257BD00969658 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		ED57417E28A257BD00969658 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		ED57418128A258D100969658 /* FuturePurchasesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturePurchasesCell.swift; sourceTree = "<group>"; };
+		ED57418228A258D100969658 /* FuturePurchasesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FuturePurchasesCell.xib; sourceTree = "<group>"; };
+		ED57418628A29B9200969658 /* SecondProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondProgressBar.swift; sourceTree = "<group>"; };
+		ED57418728A29B9200969658 /* SecondProgressBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondProgressBar.xib; sourceTree = "<group>"; };
+		ED57418F28A29EDF00969658 /* Label_Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label_Ext.swift; sourceTree = "<group>"; };
+		ED57419028A29EDF00969658 /* Btn_Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Btn_Ext.swift; sourceTree = "<group>"; };
+		ED58E98D28A4DB4000E65EE7 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		ED58E99B28A4F9CE00E65EE7 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		ED725F4328A59662007FA711 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		ED8B0EE328A101FB0093A429 /* UIViewController+AdditionalFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+AdditionalFeatures.swift"; sourceTree = "<group>"; };
+		ED8B0EE428A101FC0093A429 /* UIView+AdditionalFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AdditionalFeatures.swift"; sourceTree = "<group>"; };
+		ED94735628A444EC00BA10DD /* HomeVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Collection.swift"; sourceTree = "<group>"; };
+		ED94735828A4450000BA10DD /* HomeVC+Delegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Delegation.swift"; sourceTree = "<group>"; };
 		ED9F09B2289F13D400672027 /* BudgetPlanning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetPlanning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9F09B5289F13D400672027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED9F09B7289F13D400672027 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +101,8 @@
 		ED9F09D5289F13E000672027 /* BudgetPlanningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetPlanningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9F09D9289F13E000672027 /* BudgetPlanningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetPlanningUITests.swift; sourceTree = "<group>"; };
 		ED9F09DB289F13E000672027 /* BudgetPlanningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetPlanningUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDE1886F28AD159B004D0316 /* OrderDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsVC.swift; sourceTree = "<group>"; };
+		EDE1887028AD159B004D0316 /* OrderDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetailsVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +130,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED57417A28A2575D00969658 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				ED57417D28A257BD00969658 /* HomeVC.swift */,
+				ED57417E28A257BD00969658 /* HomeVC.xib */,
+				ED57418128A258D100969658 /* FuturePurchasesCell.swift */,
+				ED57418228A258D100969658 /* FuturePurchasesCell.xib */,
+				ED94735628A444EC00BA10DD /* HomeVC+Collection.swift */,
+				ED94735828A4450000BA10DD /* HomeVC+Delegation.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		ED57418528A29B9200969658 /* ProgressBar2 */ = {
+			isa = PBXGroup;
+			children = (
+				ED0940FA28D52241008180D2 /* CircularProgressView.swift */,
+				ED57418628A29B9200969658 /* SecondProgressBar.swift */,
+				ED57418728A29B9200969658 /* SecondProgressBar.xib */,
+			);
+			path = ProgressBar2;
+			sourceTree = "<group>";
+		};
+		ED57418A28A29B9700969658 /* Scences */ = {
+			isa = PBXGroup;
+			children = (
+				EDE1886E28AD159B004D0316 /* OrderDetailsVC */,
+				ED2574B228A1518300FEC730 /* FirstViewController.swift */,
+				ED58E99B28A4F9CE00E65EE7 /* FirstViewController.xib */,
+				ED9F09B9289F13D400672027 /* ViewController.swift */,
+				ED57417A28A2575D00969658 /* HomeVC */,
+				ED0940FE28D523EC008180D2 /* MonthGoalVC.swift */,
+				ED0940FF28D523EC008180D2 /* MonthGoalVC.xib */,
+			);
+			path = Scences;
+			sourceTree = "<group>";
+		};
+		ED57418B28A29BC300969658 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				ED9F09B5289F13D400672027 /* AppDelegate.swift */,
+				ED9F09B7289F13D400672027 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		ED57418E28A29E8F00969658 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED57419328A29F2600969658 /* TabBar */,
+				ED8B0EE428A101FC0093A429 /* UIView+AdditionalFeatures.swift */,
+				ED8B0EE328A101FB0093A429 /* UIViewController+AdditionalFeatures.swift */,
+				ED725F4328A59662007FA711 /* UIViewX.swift */,
+				ED57418528A29B9200969658 /* ProgressBar2 */,
+				ED57419028A29EDF00969658 /* Btn_Ext.swift */,
+				ED57418F28A29EDF00969658 /* Label_Ext.swift */,
+				ED1EC5C728D5DEB9001F63A8 /* ArcView.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED57419328A29F2600969658 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				ED02F65928A0573F003032D7 /* CustomTabbar.swift */,
+				ED02F65B28A065E3003032D7 /* AppTabBar.swift */,
+				ED58E98D28A4DB4000E65EE7 /* TabbarController.swift */,
+				ED0A48A628A5612E00E29E5D /* CustomizedTabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		ED8B0EE728A1021A0093A429 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				ED02F65D28A0674A003032D7 /* Reload.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		ED9F09A9289F13D400672027 = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +233,10 @@
 		ED9F09B4289F13D400672027 /* BudgetPlanning */ = {
 			isa = PBXGroup;
 			children = (
-				ED9F09B5289F13D400672027 /* AppDelegate.swift */,
-				ED9F09B7289F13D400672027 /* SceneDelegate.swift */,
-				ED9F09B9289F13D400672027 /* ViewController.swift */,
+				ED57418E28A29E8F00969658 /* Supporting Files */,
+				ED57418B28A29BC300969658 /* AppDelegate */,
+				ED57418A28A29B9700969658 /* Scences */,
+				ED8B0EE728A1021A0093A429 /* Helper */,
 				ED9F09BB289F13D400672027 /* Main.storyboard */,
 				ED9F09C1289F13DE00672027 /* Assets.xcassets */,
 				ED9F09C3289F13DE00672027 /* LaunchScreen.storyboard */,
@@ -128,6 +261,15 @@
 				ED9F09DB289F13E000672027 /* BudgetPlanningUITestsLaunchTests.swift */,
 			);
 			path = BudgetPlanningUITests;
+			sourceTree = "<group>";
+		};
+		EDE1886E28AD159B004D0316 /* OrderDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				EDE1886F28AD159B004D0316 /* OrderDetailsVC.swift */,
+				EDE1887028AD159B004D0316 /* OrderDetailsVC.xib */,
+			);
+			path = OrderDetailsVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +376,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED57418928A29B9200969658 /* SecondProgressBar.xib in Resources */,
 				ED9F09C5289F13DE00672027 /* LaunchScreen.storyboard in Resources */,
+				ED57418028A257BD00969658 /* HomeVC.xib in Resources */,
+				ED57418428A258D100969658 /* FuturePurchasesCell.xib in Resources */,
+				ED09410128D523EC008180D2 /* MonthGoalVC.xib in Resources */,
 				ED9F09C2289F13DE00672027 /* Assets.xcassets in Resources */,
+				ED58E99C28A4F9CE00E65EE7 /* FirstViewController.xib in Resources */,
+				EDE1887228AD159B004D0316 /* OrderDetailsVC.xib in Resources */,
 				ED9F09BD289F13D400672027 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,10 +409,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED02F65A28A0573F003032D7 /* CustomTabbar.swift in Sources */,
+				ED94735728A444EC00BA10DD /* HomeVC+Collection.swift in Sources */,
+				ED57417F28A257BD00969658 /* HomeVC.swift in Sources */,
 				ED9F09BA289F13D400672027 /* ViewController.swift in Sources */,
+				ED09410028D523EC008180D2 /* MonthGoalVC.swift in Sources */,
+				ED0A48A728A5612E00E29E5D /* CustomizedTabBar.swift in Sources */,
+				ED725F4428A59662007FA711 /* UIViewX.swift in Sources */,
+				ED2574B328A1518300FEC730 /* FirstViewController.swift in Sources */,
+				ED02F65C28A065E4003032D7 /* AppTabBar.swift in Sources */,
+				ED1EC5C828D5DEB9001F63A8 /* ArcView.swift in Sources */,
+				ED57419128A29EDF00969658 /* Label_Ext.swift in Sources */,
+				ED8B0EE528A101FC0093A429 /* UIViewController+AdditionalFeatures.swift in Sources */,
+				ED57418828A29B9200969658 /* SecondProgressBar.swift in Sources */,
 				ED9F09C0289F13D400672027 /* BudgetPlanning.xcdatamodeld in Sources */,
+				ED0940FB28D52241008180D2 /* CircularProgressView.swift in Sources */,
 				ED9F09B6289F13D400672027 /* AppDelegate.swift in Sources */,
+				ED94735928A4450000BA10DD /* HomeVC+Delegation.swift in Sources */,
+				ED58E98F28A4DB4100E65EE7 /* TabbarController.swift in Sources */,
+				EDE1887128AD159B004D0316 /* OrderDetailsVC.swift in Sources */,
+				ED02F65E28A0674A003032D7 /* Reload.swift in Sources */,
 				ED9F09B8289F13D400672027 /* SceneDelegate.swift in Sources */,
+				ED57418328A258D100969658 /* FuturePurchasesCell.swift in Sources */,
+				ED57419228A29EDF00969658 /* Btn_Ext.swift in Sources */,
+				ED8B0EE628A101FC0093A429 /* UIView+AdditionalFeatures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
