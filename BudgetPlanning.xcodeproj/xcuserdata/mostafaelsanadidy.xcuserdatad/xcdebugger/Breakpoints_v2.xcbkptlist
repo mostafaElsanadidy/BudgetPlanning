@@ -103,64 +103,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "08FFF431-571A-403B-83E1-46F3007F7EA7"
+            uuid = "F694796F-42B8-42B7-A439-02A205D5C3D1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BudgetPlanning/Scences/HomeVC/HomeVC+Delegation.swift"
+            filePath = "BudgetPlanning/Supporting Files/ProgressBar2/CircularProgressView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
+            landmarkName = "CircularProgressView"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89BBC447-0FC9-4CBC-B942-F383993B9CCA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetPlanning/Supporting Files/ProgressBar2/CircularProgressView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "setProgressWithAnimation(fromValue:duration:value:color:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8FC6BFDD-679D-47A8-ACCB-1D70E4796B4F"
+            uuid = "82016A71-6683-4BE4-BA5B-C9A448F79F30"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BudgetPlanning/Scences/HomeVC/FuturePurchasesCell.swift"
+            filePath = "BudgetPlanning/Supporting Files/ProgressBar2/CircularProgressView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "draw(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "978CC141-B7DA-4B12-9E6F-439B6F4A92EE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BudgetPlanning/Scences/HomeVC/HomeVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "setup_Collection()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D47EA10C-B675-459E-8838-62C96FD5CBCE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BudgetPlanning/Scences/HomeVC/FuturePurchasesCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "prepareForReuse()"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "createCircularPath()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -23,13 +23,14 @@ extension ReloadDelegate {
         //HOME
     
       //  let tabBarController = TabBarController()
-        var arrOfVC:[UIViewController] = [FirstViewController()]
+        var arrOfVC:[UIViewController] = []
             let arrOfVC_ID = ["HomeVC"]
             
             for vcIdentifier in arrOfVC_ID{
                 let viewController = storyboard.instantiateViewController(withIdentifier: vcIdentifier)
                 arrOfVC.append(viewController)
             }
+        arrOfVC.append(FirstViewController())
         arrOfVC.append(MonthGoalVC())
         arrOfVC.append(HomeVC())
             tabBarController.viewControllers = arrOfVC

@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let selectedIndex = 1
+    let selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        let selectedIndex = 1
             tabBarItem.title = ""
      //        setup_Collection()
             tabBarItem.image = configureTabBarImage(with:selectedIndex,isSelectedState: true)

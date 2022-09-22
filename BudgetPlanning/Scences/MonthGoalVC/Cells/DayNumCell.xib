@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DayNumCell" customModule="BudgetPlanning" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="123" height="35"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="123" height="35"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Kl-xC-do0">
+                        <rect key="frame" x="0.0" y="0.0" width="123" height="35"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkN-27-CEx">
+                                <rect key="frame" x="0.0" y="0.0" width="123" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cv-OH-yud" customClass="UIViewX" customModule="BudgetPlanning" customModuleProvider="target">
+                                <rect key="frame" x="57.5" y="0.0" width="8" height="8"/>
+                                <color key="backgroundColor" red="1" green="0.35294117650000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6cv-OH-yud" secondAttribute="height" multiplier="1:1" id="1cV-L0-e3B"/>
+                                    <constraint firstAttribute="width" constant="8" id="wIj-VQ-CDE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wkN-27-CEx" secondAttribute="trailing" id="RJx-Cx-dMx"/>
+                            <constraint firstItem="6cv-OH-yud" firstAttribute="width" secondItem="6cv-OH-yud" secondAttribute="height" multiplier="1:1" id="tQM-zJ-yzJ"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="3Kl-xC-do0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Klc-4t-BNe"/>
+                <constraint firstAttribute="bottom" secondItem="3Kl-xC-do0" secondAttribute="bottom" id="NTm-QU-wpT"/>
+                <constraint firstAttribute="trailing" secondItem="3Kl-xC-do0" secondAttribute="trailing" id="ZFf-du-UR4"/>
+                <constraint firstItem="3Kl-xC-do0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eEs-ED-09X"/>
+            </constraints>
+            <size key="customSize" width="123" height="49"/>
+            <connections>
+                <outlet property="dayNameLabel" destination="wkN-27-CEx" id="XW3-gG-k51"/>
+                <outlet property="segmentedView" destination="6cv-OH-yud" id="NHc-5W-KvO"/>
+            </connections>
+            <point key="canvasLocation" x="190.57971014492756" y="67.96875"/>
+        </collectionViewCell>
+    </objects>
+</document>

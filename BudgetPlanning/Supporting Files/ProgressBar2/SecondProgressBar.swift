@@ -76,7 +76,8 @@ class SecondProgressBar: UIView {
         layer.mask = backgroundMask
         
         var progressRect = CGRect.init(origin: .zero, size: CGSize.init(width: rect.width * progress, height: rect.height))
-        progressRect.origin.x = rect.width * (1-progress)
+//        progressRect.origin.x = rect.width * (1-progress)
+        progressRect.origin.x = 0
         progressLayer.frame = progressRect
        // layer.addSublayer(progressLayer)
         progressLayer.backgroundColor = color?.cgColor

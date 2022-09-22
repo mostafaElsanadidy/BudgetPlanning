@@ -14,12 +14,12 @@ class FuturePurchasesCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        progressBar.progress = 0.6
-        progressBar.precentageLabel.text = "%\((1-0.6)*100)"
+        progressBar.progress = 0.7
+        progressBar.precentageLabel.text = "%\(0.7*100)"
         progressBar.precentageLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         progressBar.precentageLabel.font = UIFont.systemFont(ofSize: 15, weight: .black)
-        progressBar.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-        progressBar.color = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        progressBar.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        progressBar.color = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
     }
 
     override func draw(_ rect: CGRect) {

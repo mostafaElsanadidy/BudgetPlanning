@@ -4,12 +4,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="BudgetPlanning" customModuleProvider="target">
             <connections>
+                <outlet property="CircularProgress" destination="xm0-tj-NSw" id="RhN-LK-ePX"/>
                 <outlet property="view" destination="0Ai-hp-65K" id="B9Q-X7-cy3"/>
             </connections>
         </placeholder>
@@ -17,14 +17,25 @@
         <view contentMode="scaleToFill" id="0Ai-hp-65K">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xm0-tj-NSw" customClass="CircularProgressView" customModule="BudgetPlanning" customModuleProvider="target">
+                    <rect key="frame" x="107" y="74" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="K7X-7d-qzg"/>
+                        <constraint firstAttribute="width" secondItem="xm0-tj-NSw" secondAttribute="height" multiplier="1:1" id="jxx-qL-XRS"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isClockWise" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="zIz-4C-JkK"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.99607843139999996" green="0.80392156859999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xm0-tj-NSw" firstAttribute="centerX" secondItem="0Ai-hp-65K" secondAttribute="centerX" id="2yO-uK-5tT"/>
+                <constraint firstItem="xm0-tj-NSw" firstAttribute="top" secondItem="zIz-4C-JkK" secondAttribute="top" constant="30" id="FKH-pc-SPS"/>
+            </constraints>
             <point key="canvasLocation" x="135" y="68"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

@@ -41,6 +41,12 @@
 		ED9F09D0289F13DF00672027 /* BudgetPlanningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F09CF289F13DF00672027 /* BudgetPlanningTests.swift */; };
 		ED9F09DA289F13E000672027 /* BudgetPlanningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F09D9289F13E000672027 /* BudgetPlanningUITests.swift */; };
 		ED9F09DC289F13E000672027 /* BudgetPlanningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F09DB289F13E000672027 /* BudgetPlanningUITestsLaunchTests.swift */; };
+		EDA61E2728D782FC00D60224 /* DayNumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA61E2528D782FC00D60224 /* DayNumCell.swift */; };
+		EDA61E2828D782FC00D60224 /* DayNumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA61E2628D782FC00D60224 /* DayNumCell.xib */; };
+		EDA61E2B28D7879700D60224 /* PaymentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA61E2928D7879700D60224 /* PaymentsCell.swift */; };
+		EDA61E2C28D7879700D60224 /* PaymentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA61E2A28D7879700D60224 /* PaymentsCell.xib */; };
+		EDA61E2E28D7986A00D60224 /* MonthGoalVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA61E2D28D7986A00D60224 /* MonthGoalVC+Collection.swift */; };
+		EDA61E3028D7989900D60224 /* MonthGoalVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA61E2F28D7989900D60224 /* MonthGoalVC+Delegate.swift */; };
 		EDE1887128AD159B004D0316 /* OrderDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1886F28AD159B004D0316 /* OrderDetailsVC.swift */; };
 		EDE1887228AD159B004D0316 /* OrderDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE1887028AD159B004D0316 /* OrderDetailsVC.xib */; };
 /* End PBXBuildFile section */
@@ -101,6 +107,12 @@
 		ED9F09D5289F13E000672027 /* BudgetPlanningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetPlanningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9F09D9289F13E000672027 /* BudgetPlanningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetPlanningUITests.swift; sourceTree = "<group>"; };
 		ED9F09DB289F13E000672027 /* BudgetPlanningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetPlanningUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDA61E2528D782FC00D60224 /* DayNumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNumCell.swift; sourceTree = "<group>"; };
+		EDA61E2628D782FC00D60224 /* DayNumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayNumCell.xib; sourceTree = "<group>"; };
+		EDA61E2928D7879700D60224 /* PaymentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsCell.swift; sourceTree = "<group>"; };
+		EDA61E2A28D7879700D60224 /* PaymentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentsCell.xib; sourceTree = "<group>"; };
+		EDA61E2D28D7986A00D60224 /* MonthGoalVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonthGoalVC+Collection.swift"; sourceTree = "<group>"; };
+		EDA61E2F28D7989900D60224 /* MonthGoalVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonthGoalVC+Delegate.swift"; sourceTree = "<group>"; };
 		EDE1886F28AD159B004D0316 /* OrderDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsVC.swift; sourceTree = "<group>"; };
 		EDE1887028AD159B004D0316 /* OrderDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetailsVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,13 +168,12 @@
 		ED57418A28A29B9700969658 /* Scences */ = {
 			isa = PBXGroup;
 			children = (
+				EDA61E2128D7826500D60224 /* MonthGoalVC */,
 				EDE1886E28AD159B004D0316 /* OrderDetailsVC */,
 				ED2574B228A1518300FEC730 /* FirstViewController.swift */,
 				ED58E99B28A4F9CE00E65EE7 /* FirstViewController.xib */,
 				ED9F09B9289F13D400672027 /* ViewController.swift */,
 				ED57417A28A2575D00969658 /* HomeVC */,
-				ED0940FE28D523EC008180D2 /* MonthGoalVC.swift */,
-				ED0940FF28D523EC008180D2 /* MonthGoalVC.xib */,
 			);
 			path = Scences;
 			sourceTree = "<group>";
@@ -261,6 +272,29 @@
 				ED9F09DB289F13E000672027 /* BudgetPlanningUITestsLaunchTests.swift */,
 			);
 			path = BudgetPlanningUITests;
+			sourceTree = "<group>";
+		};
+		EDA61E2128D7826500D60224 /* MonthGoalVC */ = {
+			isa = PBXGroup;
+			children = (
+				ED0940FE28D523EC008180D2 /* MonthGoalVC.swift */,
+				ED0940FF28D523EC008180D2 /* MonthGoalVC.xib */,
+				EDA61E2428D782D100D60224 /* Cells */,
+				EDA61E2D28D7986A00D60224 /* MonthGoalVC+Collection.swift */,
+				EDA61E2F28D7989900D60224 /* MonthGoalVC+Delegate.swift */,
+			);
+			path = MonthGoalVC;
+			sourceTree = "<group>";
+		};
+		EDA61E2428D782D100D60224 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EDA61E2528D782FC00D60224 /* DayNumCell.swift */,
+				EDA61E2628D782FC00D60224 /* DayNumCell.xib */,
+				EDA61E2928D7879700D60224 /* PaymentsCell.swift */,
+				EDA61E2A28D7879700D60224 /* PaymentsCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EDE1886E28AD159B004D0316 /* OrderDetailsVC */ = {
@@ -377,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED57418928A29B9200969658 /* SecondProgressBar.xib in Resources */,
+				EDA61E2C28D7879700D60224 /* PaymentsCell.xib in Resources */,
 				ED9F09C5289F13DE00672027 /* LaunchScreen.storyboard in Resources */,
 				ED57418028A257BD00969658 /* HomeVC.xib in Resources */,
 				ED57418428A258D100969658 /* FuturePurchasesCell.xib in Resources */,
@@ -385,6 +420,7 @@
 				ED58E99C28A4F9CE00E65EE7 /* FirstViewController.xib in Resources */,
 				EDE1887228AD159B004D0316 /* OrderDetailsVC.xib in Resources */,
 				ED9F09BD289F13D400672027 /* Main.storyboard in Resources */,
+				EDA61E2828D782FC00D60224 /* DayNumCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED02F65A28A0573F003032D7 /* CustomTabbar.swift in Sources */,
+				EDA61E3028D7989900D60224 /* MonthGoalVC+Delegate.swift in Sources */,
 				ED94735728A444EC00BA10DD /* HomeVC+Collection.swift in Sources */,
 				ED57417F28A257BD00969658 /* HomeVC.swift in Sources */,
 				ED9F09BA289F13D400672027 /* ViewController.swift in Sources */,
@@ -418,9 +455,12 @@
 				ED725F4428A59662007FA711 /* UIViewX.swift in Sources */,
 				ED2574B328A1518300FEC730 /* FirstViewController.swift in Sources */,
 				ED02F65C28A065E4003032D7 /* AppTabBar.swift in Sources */,
+				EDA61E2E28D7986A00D60224 /* MonthGoalVC+Collection.swift in Sources */,
 				ED1EC5C828D5DEB9001F63A8 /* ArcView.swift in Sources */,
 				ED57419128A29EDF00969658 /* Label_Ext.swift in Sources */,
 				ED8B0EE528A101FC0093A429 /* UIViewController+AdditionalFeatures.swift in Sources */,
+				EDA61E2B28D7879700D60224 /* PaymentsCell.swift in Sources */,
+				EDA61E2728D782FC00D60224 /* DayNumCell.swift in Sources */,
 				ED57418828A29B9200969658 /* SecondProgressBar.swift in Sources */,
 				ED9F09C0289F13D400672027 /* BudgetPlanning.xcdatamodeld in Sources */,
 				ED0940FB28D52241008180D2 /* CircularProgressView.swift in Sources */,
