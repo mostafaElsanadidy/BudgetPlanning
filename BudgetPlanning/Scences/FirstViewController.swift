@@ -28,8 +28,8 @@ class FirstViewController: UIViewController {
     var currentValue = 0.0
     let savedBarDirection : SavedBarDirection = .clockwise
 //    var deadline:DispatchTime?
-//    var precentages = [0.5,0.1,0.2,0.2]
-//    var colors:[UIColor] = [.red, .blue , .brown , .white]
+//    var precentages = [0.7,0.3]
+//    var colors:[UIColor] = [.red , .white]
     
     var precentages = [0.2,0.4,0.1,0.2,0.1]
     var colors:[UIColor] = [.red, .blue , .brown , .white, .cyan]
