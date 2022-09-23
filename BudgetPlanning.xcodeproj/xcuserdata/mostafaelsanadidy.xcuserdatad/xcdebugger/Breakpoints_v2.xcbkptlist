@@ -110,8 +110,8 @@
             filePath = "BudgetPlanning/Supporting Files/ProgressBar2/CircularProgressView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
+            startingLineNumber = "388"
+            endingLineNumber = "388"
             landmarkName = "CircularProgressView"
             landmarkType = "3">
          </BreakpointContent>
@@ -119,15 +119,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "89BBC447-0FC9-4CBC-B942-F383993B9CCA"
+            uuid = "CAFC129B-636B-46C9-9BCA-B306A8EE392F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetPlanning/Supporting Files/ProgressBar2/CircularProgressView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "createCircularPath()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "848A9359-6072-4BD9-A6E7-CA233694E9EA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetPlanning/Supporting Files/ProgressBar2/CircularProgressView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
             landmarkName = "setProgressWithAnimation(fromValue:duration:value:color:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,16 +151,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "82016A71-6683-4BE4-BA5B-C9A448F79F30"
+            uuid = "52AFE1A0-90FF-41CB-B558-E4D482BA7B8B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetPlanning/Supporting Files/ProgressBar2/CircularProgressView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
-            landmarkName = "createCircularPath()"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
+            landmarkName = "setProgressWithAnimation(fromValue:duration:value:color:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7264FF48-4370-44E9-B1F6-9CD099C2BF87"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetPlanning/Scences/FirstViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "didTimeOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21305174-D7E7-4D4F-B821-7E7F6C7F2437"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetPlanning/Scences/FirstViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "didTimeOut()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

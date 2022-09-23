@@ -19,9 +19,13 @@ class CircularProgressView: UIView {
     fileprivate var trackLayer = CAShapeLayer()
     fileprivate var segmentLayers = [CAShapeLayer]()
     
+    
     fileprivate var circlePath = UIBezierPath()
-    var precentages = [0.2,0.4,0.1,0.2,0.1]
-    var colors:[UIColor] = [.red, .blue , .brown , .white, .cyan]
+    var precentages:[Double] = []
+    var colors:[UIColor] = []
+    
+//    var precentages = [0.2,0.4,0.1,0.2,0.1]
+//    var colors:[UIColor] = [.red, .blue , .brown , .white, .cyan]
     
     var progress: CGFloat = 0{
         didSet {
@@ -57,13 +61,15 @@ class CircularProgressView: UIView {
 //         createCircularPath()
 
         let delay:CGFloat = isSegmented ? 0.0 : 0.05
-
+        
+        
         self.configureCirclePath(delay: delay)
         trackLayer.path = circlePath.cgPath
         progressLayer.path = circlePath.cgPath
 //        segmentLayers = []
 //        layer.sublayers = []
         for layer in segmentLayers {
+            layer.fillColor = UIColor.clear.cgColor
             layer.path = circlePath.cgPath
         }
 //        circleLayer.path = circlePath.cgPath
@@ -100,7 +106,9 @@ class CircularProgressView: UIView {
         self.backgroundColor = UIColor.clear
         self.layer.cornerRadius = self.frame.size.width/2
 //        let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2, y: frame.size.height/2), radius: (frame.size.width - 1.5)/2, startAngle: CGFloat(-0.5 * .pi), endAngle: CGFloat(( (2 * 1.0) - 0.5) * .pi), clockwise: false)
-        
+//
+        index = 0
+//        index = isClockWise ? 0 : precentages.count - 1
         if !isSegmented{
             let delay:CGFloat = 0.05
             configureCirclePath(delay: delay)
@@ -118,7 +126,8 @@ class CircularProgressView: UIView {
         progressLayer.strokeEnd = 0.0
         progressLayer.cornerRadius = 20
         progressLayer.lineCap = .round
-            layer.addSublayer(progressLayer)}
+            layer.addSublayer(progressLayer)
+    }
         
 //        let rect = rectForShape()
 //        let circlePath = UIBezierPath(arcCenter: CGPoint(x:rect.midX , y: rect.midY), radius: CGFloat(10), startAngle: CGFloat(50), endAngle: CGFloat(Double.pi * 2), clockwise: true)
@@ -183,6 +192,9 @@ class CircularProgressView: UIView {
 //        }
 //        layer.addSublayer(circleLayer)
 //        let circlePath = UIBezierPath(ovalInRect: CGRect(x: 200, y: 200, width: 150, height: 150))
+        
+       
+        
         resetProgressBar()
         var segments: [CAShapeLayer] = []
 //        let segmentAngle: CGFloat = (360 * 0.125) / 360
@@ -190,8 +202,11 @@ class CircularProgressView: UIView {
 //        segmentLayers = []
         let delay:CGFloat = 0.0
         configureCirclePath(delay: delay)
-        var currentValue = 0.0
-        for var i in 0...precentages.count - 1 {
+        var currentValue = isClockWise ? 0.0 : 1.0
+        segmentLayers = [CAShapeLayer].init(repeating: CAShapeLayer(), count: precentages.count)
+//        print(segmentLayers)
+        let range = isClockWise ? stride(from: 0, through: precentages.count - 1, by: 1) : stride(from: precentages.count - 1, through: 0, by: -1)
+        for i in range {
             
 //            let startAngle = ((CGFloat(2) * segmentAngle * CGFloat(i))-0.5) * .pi
 //            let gapSize: CGFloat = 0.008
@@ -205,15 +220,20 @@ class CircularProgressView: UIView {
 
             // end angle is the start plus one segment, minus a little to make a gap
             // you'll have to play with this value to get it to look right at the size you need
+//            CGFloat((-0.5+delay) * .pi)
             let gapSize: CGFloat = 0.04
             let strokeStart:CGFloat = currentValue
-            let strokeEnd:CGFloat = strokeStart + CGFloat(Float(precentages[i])) - gapSize
-            currentValue = strokeEnd + gapSize
-            
-            print(strokeStart,strokeEnd)
+            let strokeEnd:CGFloat = isClockWise ?
+            strokeStart + CGFloat(Float(precentages[i])) - gapSize :
+            strokeStart - CGFloat(Float(precentages[i])) + gapSize
+            currentValue = isClockWise ? strokeEnd + gapSize : strokeEnd - gapSize
+            currentValue = currentValue <= 0.0 ? 0.0 : currentValue
+//            print(strokeEnd,strokeStart,currentValue)
             // start angle is number of segments * the segment angle
-            circleLayer.strokeStart = strokeStart
-            circleLayer.strokeEnd = strokeEnd
+//            circleLayer.strokeStart = strokeStart
+//            circleLayer.strokeEnd = strokeEnd
+            circleLayer.strokeStart = isClockWise ? strokeStart : strokeEnd
+            circleLayer.strokeEnd = isClockWise ? strokeEnd : strokeStart
 
             circleLayer.lineWidth = 12
             circleLayer.strokeColor = UIColor.clear.cgColor
@@ -223,29 +243,30 @@ class CircularProgressView: UIView {
             circleLayer.lineCap = .round
             
             // add the segment to the segments array and to the view
-//            if segmentLayers.count == precentages.count {
+//            if segmentLayers.count < precentages.count {
 //                segmentLayers.insert(circleLayer, at: i)
 //            }
-            print(i)
-            segmentLayers.insert(circleLayer, at: i)
-//            layer.sublayers[i] = segmentLayers[i]
+//            print(i)
+            segmentLayers[i] = circleLayer
             
         }
         layer.sublayers = segmentLayers
     }
     
-    fileprivate func configureCirclePath(delay:CGFloat){
+    fileprivate func configureCirclePath(delay:CGFloat = 0.05){
         
         let startAngle = isClockWise ?  CGFloat((-0.5+delay) * .pi) : CGFloat((1.5-delay) * .pi)
         let diff = isClockWise ? delay : -delay
         
 ////        UIBezierPath.ini
-//        if isSegmented{
-////            circlePath.addArc(withCenter: CGPoint(x: frame.size.width/2, y: frame.size.height/2), radius: (frame.size.width-1.5)/2, startAngle: CGFloat(( (2 * lastPro) - 0.5) * .pi) , endAngle: CGFloat(( (2 * pro) - 0.5) * .pi) , clockwise: isClockWise)
-//        }else{
+        if isSegmented{
+            let endAngle = isClockWise ?  CGFloat((1.5-delay) * .pi) : CGFloat((-0.5+delay) * .pi)
+            circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2, y: frame.size.height/2), radius: (frame.size.width)/2, startAngle: startAngle , endAngle: endAngle , clockwise: isClockWise)
+        }else{
+            
             circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2, y: frame.size.height/2), radius: (frame.size.width-1.5)/2, startAngle: startAngle , endAngle: CGFloat(( (2 * progress) - flag - diff) * .pi) , clockwise: isClockWise)
 //
-//    }
+    }
         
 //        for i in 1...segmentLayers.count{
 //            circlePath.addArc(arcCenter: CGPoint(x: frame.size.width/2, y: frame.size.height/2), radius: (frame.size.width-1.5)/2, startAngle: startAngle , endAngle: CGFloat(( (2 * i/8) - flag - diff) * .pi) , clockwise: isClockWise)}
@@ -259,6 +280,8 @@ class CircularProgressView: UIView {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = duration
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+//        animation.fromValue = isClockWise ? fromValue : value
+//        animation.toValue = isClockWise ? value : fromValue
         animation.fromValue = fromValue
         animation.toValue = value
         
@@ -268,6 +291,7 @@ class CircularProgressView: UIView {
             progressLayer.add(animation, forKey: "animateprogress")
     }
         else{
+            
         
            
 //        guard let sublayers = progressLayer.sublayers as? [CAShapeLayer]
@@ -275,8 +299,13 @@ class CircularProgressView: UIView {
 //                                    $0.strokeStart == CGFloat(fromValue)})
 //        else { return }
             
-            guard index <= segmentLayers.count-1 else{
-                index = 0
+//            index = 0
+//            index = isClockWise ? 0 : precentages.count - 1
+            let condition:Bool = (index <= segmentLayers.count-1)
+//            let condition:Bool = isClockWise ? (index <= precentages.count-1) : (index >= 0)
+            guard condition else{
+//                index = isClockWise ? 0 : precentages.count - 1
+//                index = 0
 //                segmentLayers[index].strokeColor = UIColor.clear.cgColor
 //                segmentLayers = []
 //                layer.sublayers = []
@@ -287,20 +316,30 @@ class CircularProgressView: UIView {
             
 //            print(value)
 //            print("\(index) oijjl")
-            segmentLayers[index].strokeColor = color.cgColor
+            
+           
                 
 //            }else{
 //                segmentLayers[index].strokeColor = UIColor.blue.cgColor
 //            }
             
-            print(fromValue,value)
+//            print(fromValue,value)
+//            segmentLayers[index].strokeStart = isClockWise ? CGFloat(fromValue) : CGFloat(value)
+//            segmentLayers[index].strokeEnd = isClockWise ? CGFloat(value) : CGFloat(fromValue)
             segmentLayers[index].strokeStart = CGFloat(fromValue)
-        segmentLayers[index].strokeEnd = CGFloat(value)
+            segmentLayers[index].strokeEnd = CGFloat(value)
+            
+            segmentLayers[index].strokeColor = color.cgColor
+//            segmentLayers[index].strokeStart = CGFloat(fromValue)
+//            segmentLayers[index].strokeEnd = CGFloat(value)
 //            segmentLayers[index].animation(forKey: "animateprogress")
             
 //            segmentLayers[index].setValue(animation, forKey: "animateprogress")
             segmentLayers[index].add(animation, forKey: "animateprogress")
+//            print(segmentLayers)
+//            print(segmentLayers.count)
             index += 1
+//            index = isClockWise ? index + 1 : index - 1
         }
 //            guard let sublayers = progressLayer.sublayers else { return }
 //            for (i,layer) in sublayers.enumerated() {
@@ -323,6 +362,7 @@ class CircularProgressView: UIView {
     }
     func resetProgressBar(){
         
+//        index = isClockWise ? 0 : precentages.count - 1
         index = 0
         for layer in segmentLayers {
             
