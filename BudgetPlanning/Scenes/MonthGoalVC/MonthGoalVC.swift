@@ -16,13 +16,20 @@ class MonthGoalVC: UIViewController {
     @IBOutlet weak var todayGoalProgressBar: SecondProgressBar!
     
     let savedBarDirection : SavedBarDirection = .clockwise
+    var numOfDays:Int = 0
+    var monthName:String = ""
+    var days:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setup_Collection()
-        
+        numOfDays = 30
+        monthName = "Dec"
+        for i in 1...numOfDays{
+            days.append("\(i) \(monthName)")
+        }
         todayGoalProgressBar.progress = CGFloat(0.6)
         todayGoalProgressBar.precentageLabel.text = "Saved Today %\((0.6)*100)"
         todayGoalProgressBar.precentageLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)

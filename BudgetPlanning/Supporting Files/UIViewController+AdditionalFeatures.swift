@@ -57,8 +57,9 @@ extension UIViewController{
                 height = 50
                 imageName = "dollar"
             case 2:
-                height = 50
-                imageName = "MOney-sign"
+                height = 70
+//                imageName = "MOney-sign"
+                imageName = "target"
             case 3:
                 height = 45
                 imageName = "doollar"
@@ -96,6 +97,9 @@ extension UIViewController{
         if !isSelectedState{
             
         let label = UILabel(frame: CGRect(x: imageView.frame.origin.x+imageView.frame.width/2-10, y: imageView.frame.origin.y-22, width: 20, height: 20))
+            if selectedIndx == 2{
+                label.frame.origin.y = imageView.frame.origin.y - 10
+            }
         label.textAlignment = .center
         label.textColor = .white
         label.text = "●"
@@ -103,6 +107,7 @@ extension UIViewController{
            // label.layer.cornerRadius = 20/2
 
             view.addSubview(label)
+            view.bringSubviewToFront(label)
         }
         
        

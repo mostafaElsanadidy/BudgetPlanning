@@ -6,11 +6,25 @@
 //
 
 import UIKit
+
+
+
+enum ProgressBarDirection {
+    case FromRight
+    case FromLeft
+}
+
 @IBDesignable
 class SecondProgressBar: UIView {
 
     @IBInspectable var color: UIColor? = .gray
     private let progressLayer = CALayer()
+    var progressBarDirection:ProgressBarDirection = .FromLeft{
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
     let precentageLabel:UILabel = {
         var labl = UILabel()
           labl.translatesAutoresizingMaskIntoConstraints = false
@@ -76,8 +90,10 @@ class SecondProgressBar: UIView {
         layer.mask = backgroundMask
         
         var progressRect = CGRect.init(origin: .zero, size: CGSize.init(width: rect.width * progress, height: rect.height))
-//        progressRect.origin.x = rect.width * (1-progress)
-        progressRect.origin.x = 0
+        progressRect.origin.x = progressBarDirection == .FromLeft ? 0 : rect.width * (1-progress)
+//
+        
+        
         progressLayer.frame = progressRect
        // layer.addSublayer(progressLayer)
         progressLayer.backgroundColor = color?.cgColor

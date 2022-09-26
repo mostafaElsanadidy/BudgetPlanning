@@ -15,7 +15,12 @@
 		ED09410128D523EC008180D2 /* MonthGoalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0940FF28D523EC008180D2 /* MonthGoalVC.xib */; };
 		ED0A48A728A5612E00E29E5D /* CustomizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0A48A628A5612E00E29E5D /* CustomizedTabBar.swift */; };
 		ED1EC5C828D5DEB9001F63A8 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1EC5C728D5DEB9001F63A8 /* ArcView.swift */; };
-		ED2574B328A1518300FEC730 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2574B228A1518300FEC730 /* FirstViewController.swift */; };
+		ED2574B328A1518300FEC730 /* AboutMyBudgetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2574B228A1518300FEC730 /* AboutMyBudgetVC.swift */; };
+		ED4F0D6028DF9EDE00F9359E /* PrecentageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F0D5E28DF9EDE00F9359E /* PrecentageCell.swift */; };
+		ED4F0D6128DF9EDE00F9359E /* PrecentageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED4F0D5F28DF9EDE00F9359E /* PrecentageCell.xib */; };
+		ED4F0D6328DFAC6F00F9359E /* SelfSizingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F0D6228DFAC6F00F9359E /* SelfSizingCollectionView.swift */; };
+		ED4F0D6528DFAEBA00F9359E /* AboutMyBudget+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F0D6428DFAEBA00F9359E /* AboutMyBudget+Collection.swift */; };
+		ED4F0D6728DFAECD00F9359E /* AboutMyBudgetVC+Delegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F0D6628DFAECD00F9359E /* AboutMyBudgetVC+Delegation.swift */; };
 		ED57417F28A257BD00969658 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57417D28A257BD00969658 /* HomeVC.swift */; };
 		ED57418028A257BD00969658 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED57417E28A257BD00969658 /* HomeVC.xib */; };
 		ED57418328A258D100969658 /* FuturePurchasesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57418128A258D100969658 /* FuturePurchasesCell.swift */; };
@@ -25,7 +30,7 @@
 		ED57419128A29EDF00969658 /* Label_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57418F28A29EDF00969658 /* Label_Ext.swift */; };
 		ED57419228A29EDF00969658 /* Btn_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57419028A29EDF00969658 /* Btn_Ext.swift */; };
 		ED58E98F28A4DB4100E65EE7 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58E98D28A4DB4000E65EE7 /* TabbarController.swift */; };
-		ED58E99C28A4F9CE00E65EE7 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED58E99B28A4F9CE00E65EE7 /* FirstViewController.xib */; };
+		ED58E99C28A4F9CE00E65EE7 /* AboutMyBudgetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED58E99B28A4F9CE00E65EE7 /* AboutMyBudgetVC.xib */; };
 		ED725F4428A59662007FA711 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED725F4328A59662007FA711 /* UIViewX.swift */; };
 		ED8B0EE528A101FC0093A429 /* UIViewController+AdditionalFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0EE328A101FB0093A429 /* UIViewController+AdditionalFeatures.swift */; };
 		ED8B0EE628A101FC0093A429 /* UIView+AdditionalFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0EE428A101FC0093A429 /* UIView+AdditionalFeatures.swift */; };
@@ -77,7 +82,12 @@
 		ED0940FF28D523EC008180D2 /* MonthGoalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthGoalVC.xib; sourceTree = "<group>"; };
 		ED0A48A628A5612E00E29E5D /* CustomizedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTabBar.swift; sourceTree = "<group>"; };
 		ED1EC5C728D5DEB9001F63A8 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
-		ED2574B228A1518300FEC730 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		ED2574B228A1518300FEC730 /* AboutMyBudgetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMyBudgetVC.swift; sourceTree = "<group>"; };
+		ED4F0D5E28DF9EDE00F9359E /* PrecentageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecentageCell.swift; sourceTree = "<group>"; };
+		ED4F0D5F28DF9EDE00F9359E /* PrecentageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrecentageCell.xib; sourceTree = "<group>"; };
+		ED4F0D6228DFAC6F00F9359E /* SelfSizingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingCollectionView.swift; sourceTree = "<group>"; };
+		ED4F0D6428DFAEBA00F9359E /* AboutMyBudget+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutMyBudget+Collection.swift"; sourceTree = "<group>"; };
+		ED4F0D6628DFAECD00F9359E /* AboutMyBudgetVC+Delegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutMyBudgetVC+Delegation.swift"; sourceTree = "<group>"; };
 		ED57417D28A257BD00969658 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		ED57417E28A257BD00969658 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		ED57418128A258D100969658 /* FuturePurchasesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturePurchasesCell.swift; sourceTree = "<group>"; };
@@ -87,7 +97,7 @@
 		ED57418F28A29EDF00969658 /* Label_Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label_Ext.swift; sourceTree = "<group>"; };
 		ED57419028A29EDF00969658 /* Btn_Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Btn_Ext.swift; sourceTree = "<group>"; };
 		ED58E98D28A4DB4000E65EE7 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
-		ED58E99B28A4F9CE00E65EE7 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		ED58E99B28A4F9CE00E65EE7 /* AboutMyBudgetVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutMyBudgetVC.xib; sourceTree = "<group>"; };
 		ED725F4328A59662007FA711 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		ED8B0EE328A101FB0093A429 /* UIViewController+AdditionalFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+AdditionalFeatures.swift"; sourceTree = "<group>"; };
 		ED8B0EE428A101FC0093A429 /* UIView+AdditionalFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AdditionalFeatures.swift"; sourceTree = "<group>"; };
@@ -142,6 +152,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED4F0D5C28DF9E1C00F9359E /* AboutMyBudget */ = {
+			isa = PBXGroup;
+			children = (
+				ED2574B228A1518300FEC730 /* AboutMyBudgetVC.swift */,
+				ED58E99B28A4F9CE00E65EE7 /* AboutMyBudgetVC.xib */,
+				ED4F0D6428DFAEBA00F9359E /* AboutMyBudget+Collection.swift */,
+				ED4F0D6628DFAECD00F9359E /* AboutMyBudgetVC+Delegation.swift */,
+				ED4F0D6228DFAC6F00F9359E /* SelfSizingCollectionView.swift */,
+				ED4F0D5D28DF9E6B00F9359E /* Cells */,
+			);
+			path = AboutMyBudget;
+			sourceTree = "<group>";
+		};
+		ED4F0D5D28DF9E6B00F9359E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ED4F0D5E28DF9EDE00F9359E /* PrecentageCell.swift */,
+				ED4F0D5F28DF9EDE00F9359E /* PrecentageCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		ED57417A28A2575D00969658 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,17 +197,16 @@
 			path = ProgressBar2;
 			sourceTree = "<group>";
 		};
-		ED57418A28A29B9700969658 /* Scences */ = {
+		ED57418A28A29B9700969658 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				ED4F0D5C28DF9E1C00F9359E /* AboutMyBudget */,
 				EDA61E2128D7826500D60224 /* MonthGoalVC */,
 				EDE1886E28AD159B004D0316 /* OrderDetailsVC */,
-				ED2574B228A1518300FEC730 /* FirstViewController.swift */,
-				ED58E99B28A4F9CE00E65EE7 /* FirstViewController.xib */,
 				ED9F09B9289F13D400672027 /* ViewController.swift */,
 				ED57417A28A2575D00969658 /* HomeVC */,
 			);
-			path = Scences;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		ED57418B28A29BC300969658 /* AppDelegate */ = {
@@ -246,7 +277,7 @@
 			children = (
 				ED57418E28A29E8F00969658 /* Supporting Files */,
 				ED57418B28A29BC300969658 /* AppDelegate */,
-				ED57418A28A29B9700969658 /* Scences */,
+				ED57418A28A29B9700969658 /* Scenes */,
 				ED8B0EE728A1021A0093A429 /* Helper */,
 				ED9F09BB289F13D400672027 /* Main.storyboard */,
 				ED9F09C1289F13DE00672027 /* Assets.xcassets */,
@@ -415,9 +446,10 @@
 				ED9F09C5289F13DE00672027 /* LaunchScreen.storyboard in Resources */,
 				ED57418028A257BD00969658 /* HomeVC.xib in Resources */,
 				ED57418428A258D100969658 /* FuturePurchasesCell.xib in Resources */,
+				ED4F0D6128DF9EDE00F9359E /* PrecentageCell.xib in Resources */,
 				ED09410128D523EC008180D2 /* MonthGoalVC.xib in Resources */,
 				ED9F09C2289F13DE00672027 /* Assets.xcassets in Resources */,
-				ED58E99C28A4F9CE00E65EE7 /* FirstViewController.xib in Resources */,
+				ED58E99C28A4F9CE00E65EE7 /* AboutMyBudgetVC.xib in Resources */,
 				EDE1887228AD159B004D0316 /* OrderDetailsVC.xib in Resources */,
 				ED9F09BD289F13D400672027 /* Main.storyboard in Resources */,
 				EDA61E2828D782FC00D60224 /* DayNumCell.xib in Resources */,
@@ -445,17 +477,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4F0D6528DFAEBA00F9359E /* AboutMyBudget+Collection.swift in Sources */,
 				ED02F65A28A0573F003032D7 /* CustomTabbar.swift in Sources */,
 				EDA61E3028D7989900D60224 /* MonthGoalVC+Delegate.swift in Sources */,
+				ED4F0D6028DF9EDE00F9359E /* PrecentageCell.swift in Sources */,
 				ED94735728A444EC00BA10DD /* HomeVC+Collection.swift in Sources */,
 				ED57417F28A257BD00969658 /* HomeVC.swift in Sources */,
 				ED9F09BA289F13D400672027 /* ViewController.swift in Sources */,
 				ED09410028D523EC008180D2 /* MonthGoalVC.swift in Sources */,
 				ED0A48A728A5612E00E29E5D /* CustomizedTabBar.swift in Sources */,
+				ED4F0D6328DFAC6F00F9359E /* SelfSizingCollectionView.swift in Sources */,
 				ED725F4428A59662007FA711 /* UIViewX.swift in Sources */,
-				ED2574B328A1518300FEC730 /* FirstViewController.swift in Sources */,
+				ED2574B328A1518300FEC730 /* AboutMyBudgetVC.swift in Sources */,
 				ED02F65C28A065E4003032D7 /* AppTabBar.swift in Sources */,
 				EDA61E2E28D7986A00D60224 /* MonthGoalVC+Collection.swift in Sources */,
+				ED4F0D6728DFAECD00F9359E /* AboutMyBudgetVC+Delegation.swift in Sources */,
 				ED1EC5C828D5DEB9001F63A8 /* ArcView.swift in Sources */,
 				ED57419128A29EDF00969658 /* Label_Ext.swift in Sources */,
 				ED8B0EE528A101FC0093A429 /* UIViewController+AdditionalFeatures.swift in Sources */,

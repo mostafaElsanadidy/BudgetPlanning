@@ -7,8 +7,9 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class AboutMyBudgetVC: UIViewController {
 
+    @IBOutlet weak var precentagesCollectionView: SelfSizingCollectionView!
     @IBOutlet weak var circularProgress: CircularProgressView!
     let selectedIndex = 1
     var endIndex = 0
@@ -30,7 +31,7 @@ class FirstViewController: UIViewController {
 //    }
     
     var currentValue = 0.0
-    let savedBarDirection : SavedBarDirection = .counterclockwise
+    let savedBarDirection : SavedBarDirection = .clockwise
     
 //    var deadline:DispatchTime?
 //    var precentages = [0.3,0.7]
@@ -39,7 +40,7 @@ class FirstViewController: UIViewController {
 //    var precentages = [0.7,0.3]
 //    var colors:[UIColor] = [.red,.blue]
     
-    var precentages = [0.2,0.4,0.1,0.2,0.1]
+    var precentages = [0.2,0.3,0.1,0.22,0.18]
     var colors:[UIColor] = [.red, .blue , .brown , .white, .cyan]
     
     var timer : Timer? = nil {

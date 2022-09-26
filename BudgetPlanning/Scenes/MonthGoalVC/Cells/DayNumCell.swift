@@ -11,6 +11,8 @@ class DayNumCell: UICollectionViewCell {
 
     @IBOutlet weak var dayNameLabel: UILabel!
     @IBOutlet weak var segmentedView: UIViewX!
+    var dayName = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,6 +35,8 @@ class DayNumCell: UICollectionViewCell {
         UIView.transition(with: self.contentView, duration: 0.5, options: [.transitionCrossDissolve], animations: {
                self.segmentedView.isHidden = !isSelected
             self.dayNameLabel.textColor = isSelected ? #colorLiteral(red: 1, green: 0.4480487704, blue: 0.3932376504, alpha: 1) : #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+            self.dayName = isSelected ? "\(self.dayNameLabel.text!)" : self.dayName
+            self.dayNameLabel.text = isSelected ? "Today" : self.dayName
                }, completion: {_ in
                })
        }
