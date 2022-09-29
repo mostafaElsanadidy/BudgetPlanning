@@ -51,22 +51,27 @@ extension UIViewController{
           
         var height:CGFloat = 50
             switch selectedIndx{
-//            case 0:
-//                imageName = "dollar"
             case 0:
-                height = 50
-                imageName = "doollar"
+                height = 45
                 imageName = "budget"
             case 1:
+                height = 40
+                imageName = "doollar"
+                imageName = "budget"
+                imageName = "wallet2"
+//                imageName = "mybudget2"
+            case 2:
                 height = 45
 //                imageName = "MOney-sign"
 //                imageName = "climb stairs"
                 imageName = "Growth-Icon"
                 imageName = "progress"
                 imageName = "target4"
-            case 2:
-                height = 70
+                imageName = "progress4"
+            case 3:
+                height = 65
                 imageName = "target1"
+//                imageName = "budget planing"
             default:
                 height = 30
                 imageName = "MOney-sign"
@@ -92,6 +97,7 @@ extension UIViewController{
         
         let image = isSelectedState ? UIImage(named: imageName)?.withTintColor(imageColor, renderingMode: renderingMode) : UIImage(named: imageName)
 //        let image = UIImage(named: imageName)?.withTintColor(imageColor, renderingMode: renderingMode)
+//        let image = UIImage(named: imageName)
                       
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
@@ -104,14 +110,15 @@ extension UIViewController{
         //like as badgeView
         if !isSelectedState{
             
-        let label = UILabel(frame: CGRect(x: imageView.frame.origin.x+imageView.frame.width/2-10, y: imageView.frame.origin.y-22, width: 20, height: 20))
-            if selectedIndx == 2{
-                label.frame.origin.y = imageView.frame.origin.y - 10
+            let label = UILabel(frame: CGRect(x: imageView.frame.origin.x+imageView.frame.width/2-10, y: imageView.frame.origin.y+imageView.frame.height+2, width: 20, height: 20))
+            if selectedIndx == 3{
+                label.frame.origin.y = imageView.frame.origin.y+imageView.frame.height-10
             }
         label.textAlignment = .center
         label.textColor = .white
         label.text = "●"
-        label.font = UIFont(name: label.font.fontName, size: 23)
+        label.font = UIFont(name: label.font.fontName, size: 20)
+            label.isHidden = true
            // label.layer.cornerRadius = 20/2
 
             view.addSubview(label)

@@ -10,6 +10,7 @@ import UIKit
 class AboutMyBudgetVC: UIViewController {
 
     @IBOutlet weak var precentagesCollectionView: SelfSizingCollectionView!
+    @IBOutlet weak var detailsBttn: UIButton!
     @IBOutlet weak var circularProgress: CircularProgressView!
     var selectedIndex = 1
     var endIndex = 0
@@ -41,7 +42,7 @@ class AboutMyBudgetVC: UIViewController {
 //    var colors:[UIColor] = [.red,.blue]
     
     var precentages = [0.2,0.3,0.1,0.22,0.18]
-    var colors:[UIColor] = [.red, .blue , .brown , .white, .cyan]
+    var colors:[UIColor] = [.red, .blue , .brown , .lightGray, .cyan]
     var categories = ["Food","medecine","babbyToys","transportation","others"]
     
     var timer : Timer? = nil {
@@ -60,13 +61,7 @@ class AboutMyBudgetVC: UIViewController {
         condition = (self.savedBarDirection == .clockwise)
 //        endIndex = condition ? 0 : precentages.count - 1
         endIndex = 0
-//        circularProgress.progressColor = condition ? .white : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.4043720574)
-//        circularProgress.trackColor = UIColor.clear
-//        circularProgress.flag = condition ? 0.5 : 1.5
-//        circularProgress.isSegmented = true
-//        circularProgress.progress = 1
-////        configureProgressBar(progressBar: circularProgress, savedBarDirection: savedBarDirection)
-//        startTimer()
+        configureCircularProgressBar()
         
     }
     
@@ -105,18 +100,9 @@ class AboutMyBudgetVC: UIViewController {
         
 //        precentagesCollectionView.reloadData()
 //        view.viewWithTag(100)?.isHidden = true
-        precentagesCollectionView.isHidden = true
-        currentValue = condition ? 0.0 : 1.0
-        circularProgress.progressColor = condition ? .white : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.4043720574)
-        circularProgress.precentages = precentages
-        circularProgress.colors = colors
-        circularProgress.trackColor = UIColor.clear
-        circularProgress.isClockWise = condition ? true : false
-//        circularProgress.flag = condition ? 0.5 : 2.5
-        circularProgress.isSegmented = true
-        circularProgress.progress = 1
-//        configureProgressBar(progressBar: circularProgress, savedBarDirection: savedBarDirection)
-        startTimer()
+        precentagesCollectionView.isHidden = false
+        detailsBttn.layer.cornerRadius = 10
+//        configureCircularProgressBar()
        
     }
  
@@ -202,6 +188,20 @@ class AboutMyBudgetVC: UIViewController {
 //        endIndex = condition ? endIndex + 1 : endIndex - 1
     }
     
+    func configureCircularProgressBar() {
+        currentValue = condition ? 0.0 : 1.0
+        circularProgress.progressColor = condition ? .white : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.4043720574)
+        circularProgress.precentages = precentages
+        circularProgress.colors = colors
+        circularProgress.trackColor = UIColor.clear
+        circularProgress.isClockWise = condition ? true : false
+//        circularProgress.flag = condition ? 0.5 : 2.5
+        circularProgress.isSegmented = true
+        circularProgress.progress = 1
+        
+//        configureProgressBar(progressBar: circularProgress, savedBarDirection: savedBarDirection)
+        startTimer()
+    }
     
     
     

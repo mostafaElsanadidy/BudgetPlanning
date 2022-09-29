@@ -230,20 +230,31 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kt7-5u-gOh">
                                     <rect key="frame" x="115" y="21" width="200" height="128"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doollar" translatesAutoresizingMaskIntoConstraints="NO" id="GjF-j8-ARk">
-                                            <rect key="frame" x="65" y="29" width="70" height="70"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="70" id="Ave-4P-I2x"/>
-                                                <constraint firstAttribute="height" constant="70" id="ZLV-mb-fok"/>
-                                            </constraints>
-                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Z6-Q6-gRy">
+                                            <rect key="frame" x="65" y="19" width="70" height="90.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="GjF-j8-ARk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="Ave-4P-I2x"/>
+                                                        <constraint firstAttribute="height" constant="70" id="ZLV-mb-fok"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maw-KD-yaM">
+                                                    <rect key="frame" x="0.0" y="70" width="70" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                    <color key="textColor" red="0.9098039269" green="0.4784313738" blue="0.64313727620000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="GjF-j8-ARk" firstAttribute="centerX" secondItem="kt7-5u-gOh" secondAttribute="centerX" id="CGf-P4-pGK"/>
                                         <constraint firstAttribute="height" constant="128" id="DDe-u3-4AF"/>
                                         <constraint firstAttribute="width" constant="200" id="QW6-J0-qwZ"/>
-                                        <constraint firstItem="GjF-j8-ARk" firstAttribute="centerY" secondItem="kt7-5u-gOh" secondAttribute="centerY" id="h0k-4N-mnI"/>
+                                        <constraint firstItem="7Z6-Q6-gRy" firstAttribute="centerX" secondItem="kt7-5u-gOh" secondAttribute="centerX" id="bag-uD-f11"/>
+                                        <constraint firstItem="7Z6-Q6-gRy" firstAttribute="centerY" secondItem="kt7-5u-gOh" secondAttribute="centerY" id="tjs-e7-75i"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -288,7 +299,7 @@
     </objects>
     <resources>
         <image name="Untitled 3" width="506" height="509"/>
-        <image name="doollar" width="253" height="282"/>
+        <image name="checked" width="512" height="512"/>
         <image name="images-4" width="222" height="125"/>
         <image name="money bag" width="1200" height="1200"/>
         <image name="post-it-3" width="615" height="615"/>

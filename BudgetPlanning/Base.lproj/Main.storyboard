@@ -98,7 +98,7 @@
     </scenes>
     <designables>
         <designable name="V1H-ft-dPY">
-            <size key="intrinsicContentSize" width="-1" height="49"/>
+            <size key="intrinsicContentSize" width="-1" height="83"/>
         </designable>
     </designables>
     <resources>
