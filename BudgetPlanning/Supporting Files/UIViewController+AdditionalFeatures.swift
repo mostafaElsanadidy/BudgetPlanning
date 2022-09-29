@@ -51,18 +51,22 @@ extension UIViewController{
           
         var height:CGFloat = 50
             switch selectedIndx{
+//            case 0:
+//                imageName = "dollar"
             case 0:
-                imageName = "dollar"
-            case 1:
                 height = 50
-                imageName = "dollar"
+                imageName = "doollar"
+                imageName = "budget"
+            case 1:
+                height = 45
+//                imageName = "MOney-sign"
+//                imageName = "climb stairs"
+                imageName = "Growth-Icon"
+                imageName = "progress"
+                imageName = "target4"
             case 2:
                 height = 70
-//                imageName = "MOney-sign"
-                imageName = "target"
-            case 3:
-                height = 45
-                imageName = "doollar"
+                imageName = "target1"
             default:
                 height = 30
                 imageName = "MOney-sign"
@@ -91,6 +95,10 @@ extension UIViewController{
                       
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
+//        if selectedIndx == 1{
+//            imageView.contentMode = .scaleToFill
+//        }
+        
         view.addSubview(imageView)
         
         //like as badgeView

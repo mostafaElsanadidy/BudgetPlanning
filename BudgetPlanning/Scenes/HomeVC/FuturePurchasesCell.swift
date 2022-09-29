@@ -10,6 +10,7 @@ import UIKit
 class FuturePurchasesCell: UICollectionViewCell {
 
     @IBOutlet weak var progressBar: SecondProgressBar!
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
     var borderLayer = CAShapeLayer()
     var progressBArDirection:ProgressBarDirection = .FromLeft
     
@@ -20,8 +21,8 @@ class FuturePurchasesCell: UICollectionViewCell {
     }
 
     override func draw(_ rect: CGRect) {
-        
-        UIApplicationShortcutItem.init(type: <#T##String#>, localizedTitle: <#T##String#>)
+       
+//        UIApplicationShortcutItem.init(type: <#T##String#>, localizedTitle: <#T##String#>)
         if let imageView = self.viewWithTag(130){
         //    imageView.layer.cornerRadius = 20
 //            imageView.clipsToBounds = true

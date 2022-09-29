@@ -10,6 +10,7 @@ import UIKit
 class HomeVC: UIViewController {
 
     @IBOutlet weak var homeCollection: UICollectionView!
+    var selectedIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +21,15 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        let selectedIndex = 3
+        if let tabBar = self.tabBarController?.tabBar{
+            
+            guard let items = tabBar.items, let vcIndex = items.firstIndex(of: tabBarItem) else {return}
+            print(vcIndex)
+            selectedIndex = vcIndex
+//            tabBar.selectedIndex = vcIndex
+//            tabBar.setNeedsDisplay()
+        }
+        
         tabBarItem.title = ""
         setup_Collection()
         tabBarItem.image = configureTabBarImage(with: selectedIndex,isSelectedState: true)

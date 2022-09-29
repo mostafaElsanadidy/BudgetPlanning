@@ -11,7 +11,7 @@ class AboutMyBudgetVC: UIViewController {
 
     @IBOutlet weak var precentagesCollectionView: SelfSizingCollectionView!
     @IBOutlet weak var circularProgress: CircularProgressView!
-    let selectedIndex = 1
+    var selectedIndex = 1
     var endIndex = 0
    
     var gapSize = 0.03
@@ -85,6 +85,14 @@ class AboutMyBudgetVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        if let tabBar = self.tabBarController?.tabBar{
+            
+            guard let items = tabBar.items, let vcIndex = items.firstIndex(of: tabBarItem) else {return}
+            print(vcIndex)
+            self.selectedIndex = vcIndex
+//            tabBar.setNeedsDisplay()
+        }
         
         
 //        let selectedIndex = 0

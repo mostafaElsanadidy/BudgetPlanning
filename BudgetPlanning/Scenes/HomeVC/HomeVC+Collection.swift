@@ -15,6 +15,11 @@ extension HomeVC:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FuturePurchasesCell", for: indexPath) as? FuturePurchasesCell else{return UICollectionViewCell()}
+        if let cell = cell as? FuturePurchasesCell{
+            if indexPath.row == 1 && indexPath.section == 0{
+                cell.visualEffectView.isHidden = false
+            }
+        }
 //        if let viewx = cell.viewWithTag(130){
 //            viewx.backgroundColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
 //            cell.setNeedsDisplay()

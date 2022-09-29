@@ -15,9 +15,10 @@ class MonthGoalVC: UIViewController {
     @IBOutlet weak var optionCollection: UICollectionView!
     @IBOutlet weak var todayGoalProgressBar: SecondProgressBar!
     
-    let savedBarDirection : SavedBarDirection = .clockwise
+    let savedBarDirection : SavedBarDirection = .counterclockwise
     var numOfDays:Int = 0
     var monthName:String = ""
+    var selectedIndex = 0
     var days:[String] = []
     
     override func viewDidLoad() {
@@ -71,7 +72,16 @@ class MonthGoalVC: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        let selectedIndex = 2
+        if let tabBar = self.tabBarController?.tabBar{
+            
+            guard let items = tabBar.items, let vcIndex = items.firstIndex(of: tabBarItem) else {return}
+            print(vcIndex)
+            selectedIndex = vcIndex
+//            tabBar.selectedIndex = vcIndex
+//            tabBar.setNeedsDisplay()
+        }
+        
+       
              tabBarItem.title = ""
      //        setup_Collection()
             tabBarItem.image = configureTabBarImage(with: selectedIndex,isSelectedState: true)

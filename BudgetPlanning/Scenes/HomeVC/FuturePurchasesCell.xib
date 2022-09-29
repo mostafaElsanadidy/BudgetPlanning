@@ -22,6 +22,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-4" translatesAutoresizingMaskIntoConstraints="NO" id="8VG-AY-ZXq">
                                 <rect key="frame" x="5" y="10" width="150" height="150"/>
+                                <color key="tintColor" red="0.43137254901960786" green="0.71764705882352942" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8VG-AY-ZXq" secondAttribute="height" multiplier="1:1" id="cdU-m2-yeA"/>
                                 </constraints>
@@ -220,23 +221,74 @@
                             <constraint firstItem="8VG-AY-ZXq" firstAttribute="top" secondItem="crY-hI-wQg" secondAttribute="top" constant="10" id="uyt-sj-g7q"/>
                         </constraints>
                     </view>
+                    <visualEffectView hidden="YES" opaque="NO" alpha="0.97500002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6su-JC-AqL">
+                        <rect key="frame" x="10" y="20" width="430" height="170"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DyP-MY-P9P">
+                            <rect key="frame" x="0.0" y="0.0" width="430" height="170"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kt7-5u-gOh">
+                                    <rect key="frame" x="115" y="21" width="200" height="128"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doollar" translatesAutoresizingMaskIntoConstraints="NO" id="GjF-j8-ARk">
+                                            <rect key="frame" x="65" y="29" width="70" height="70"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="Ave-4P-I2x"/>
+                                                <constraint firstAttribute="height" constant="70" id="ZLV-mb-fok"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="GjF-j8-ARk" firstAttribute="centerX" secondItem="kt7-5u-gOh" secondAttribute="centerX" id="CGf-P4-pGK"/>
+                                        <constraint firstAttribute="height" constant="128" id="DDe-u3-4AF"/>
+                                        <constraint firstAttribute="width" constant="200" id="QW6-J0-qwZ"/>
+                                        <constraint firstItem="GjF-j8-ARk" firstAttribute="centerY" secondItem="kt7-5u-gOh" secondAttribute="centerY" id="h0k-4N-mnI"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="kt7-5u-gOh" firstAttribute="centerY" secondItem="DyP-MY-P9P" secondAttribute="centerY" id="ZQD-gL-f1e"/>
+                                <constraint firstItem="kt7-5u-gOh" firstAttribute="centerX" secondItem="DyP-MY-P9P" secondAttribute="centerX" id="yuV-uS-VEG"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <blurEffect style="regular"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </visualEffectView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="6su-JC-AqL" firstAttribute="centerY" secondItem="crY-hI-wQg" secondAttribute="centerY" id="2X7-Yf-ci4"/>
+                <constraint firstItem="6su-JC-AqL" firstAttribute="trailing" secondItem="crY-hI-wQg" secondAttribute="trailing" id="4BD-3y-hv0"/>
                 <constraint firstAttribute="top" secondItem="crY-hI-wQg" secondAttribute="top" constant="-20" id="FwO-SL-VUa"/>
                 <constraint firstAttribute="trailing" secondItem="crY-hI-wQg" secondAttribute="trailing" constant="10" id="Sel-wU-eew"/>
+                <constraint firstItem="6su-JC-AqL" firstAttribute="centerX" secondItem="crY-hI-wQg" secondAttribute="centerX" id="dHZ-RI-0gP"/>
                 <constraint firstItem="crY-hI-wQg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="iEv-cw-yJY"/>
+                <constraint firstItem="6su-JC-AqL" firstAttribute="top" secondItem="crY-hI-wQg" secondAttribute="top" id="k1m-9D-JZo"/>
                 <constraint firstAttribute="leading" secondItem="crY-hI-wQg" secondAttribute="leading" constant="-10" id="ogX-qv-3di"/>
             </constraints>
             <connections>
                 <outlet property="progressBar" destination="1Vr-4h-0wX" id="On1-bH-VoE"/>
+                <outlet property="visualEffectView" destination="6su-JC-AqL" id="sw5-jY-CUn"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="Untitled 3" width="506" height="509"/>
+        <image name="doollar" width="253" height="282"/>
         <image name="images-4" width="222" height="125"/>
         <image name="money bag" width="1200" height="1200"/>
         <image name="post-it-3" width="615" height="615"/>
