@@ -68,6 +68,8 @@ class FuturePurchasesCell: UICollectionViewCell {
         progressBar.precentageLabel.font = UIFont.systemFont(ofSize: 15, weight: .black)
         progressBar.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         progressBar.color = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+//        FECDE4   E87AA4
+        
 //        }
 //        else{
 //        progressBar.progress = 0.3

@@ -231,70 +231,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DB6A1AC2-E3AE-4B10-A7FA-BA3848174F38"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BudgetPlanning/Scenes/HomeVC/HomeVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1310451B-9463-4401-BB4C-63C8B59885D7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BudgetPlanning/Scenes/MonthGoalVC/MonthGoalVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1310451B-9463-4401-BB4C-63C8B59885D7 - e286b89e7c42cb0d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BudgetPlanning.MonthGoalVC.viewWillAppear(Swift.Bool) -&gt; ()"
-                  moduleName = "BudgetPlanning"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mostafaelsanadidy/Desktop/Budget_Planning/BudgetPlanning/Scenes/MonthGoalVC/MonthGoalVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "544">
-               </Location>
-               <Location
-                  uuid = "1310451B-9463-4401-BB4C-63C8B59885D7 - e286b89e7c42cb0d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BudgetPlanning.MonthGoalVC.viewWillAppear(Swift.Bool) -&gt; ()"
-                  moduleName = "BudgetPlanning"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mostafaelsanadidy/Desktop/Budget_Planning/BudgetPlanning/Scenes/MonthGoalVC/MonthGoalVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "605">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "056E310A-9968-4205-B58F-C84084AD26E2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -302,9 +238,25 @@
             filePath = "BudgetPlanning/Scenes/AboutMyBudget/AboutMyBudgetVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C9B48BE-6C10-4DDE-83CF-39A33756B23D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetPlanning/Scenes/HomeVC/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "redirect(to:rowIndex:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

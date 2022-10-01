@@ -67,7 +67,7 @@ extension UIViewController{
                 imageName = "Growth-Icon"
                 imageName = "progress"
                 imageName = "target4"
-                imageName = "progress4"
+//                imageName = "progress4"
             case 3:
                 height = 65
                 imageName = "target1"

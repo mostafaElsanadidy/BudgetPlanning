@@ -53,9 +53,10 @@ class AboutMyBudgetVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
         // Do any additional setup after loading the view.
+//        for (index,precentage) in precentages.enumerated() {
+//            colors[index] = UIColor(red: 0, green: 0, blue: 255, alpha: 1-precentage)
+//        }
         setup_Collection()
         arrOfValues = [(fromValue:CGFloat,value:CGFloat,endIndex:Int)](repeating: (fromValue:CGFloat(0.0),value:CGFloat(0.0),endIndex:0), count: precentages.count)
         condition = (self.savedBarDirection == .clockwise)

@@ -10,13 +10,29 @@ import UIKit
 class HomeVC: UIViewController {
 
     @IBOutlet weak var homeCollection: UICollectionView!
+    @IBOutlet weak var sideMenuView: UIView!
+    @IBOutlet weak var sideMenuImageView: UIImageView!
+    @IBOutlet weak var containerView: UIViewX!
     var selectedIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
-    }
+//        containerView.bringSubviewToFront(sideMenuView)
+//        sideMenuView.backgroundColor = .lightGray
+        }
+    
+   
 
+    @objc func imageTapped()
+    {
+        
+        // Your action
+        redirectToSideMenu()
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,6 +42,7 @@ class HomeVC: UIViewController {
             guard let items = tabBar.items, let vcIndex = items.firstIndex(of: tabBarItem) else {return}
             print(vcIndex)
             selectedIndex = vcIndex
+            
 //            tabBar.selectedIndex = vcIndex
 //            tabBar.setNeedsDisplay()
         }
@@ -36,6 +53,48 @@ class HomeVC: UIViewController {
         tabBarItem.selectedImage = configureTabBarImage(with: selectedIndex)
         tabBarController?.selectedIndex = selectedIndex
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        sideMenuView.isUserInteractionEnabled = true
+        sideMenuView.addGestureRecognizer(tapGestureRecognizer)
+        
+    }
+    
+    func redirectToSideMenu() {
+        let sideMenuVC = SideMenuVC()
+        redirect(to: sideMenuVC)
+//        SideMenuVC.orderDetailsViewModel.selectedMeal.value = tuple.selectedMeal
+//        orderDetailsVC.orderDetailsViewModel.selectedMealValueDidChanged = tuple.didTapped
+//        self.tabBarController?.pushViewController(VC:sideMenuVC)
+    }
+    func redirect(to willPresentVC:UIViewController,  rowIndex : Int = 0) {
+        
+//            let sideMenuVC = SideMenuVC()
+            willPresentVC.modalPresentationStyle = .overFullScreen
+            willPresentVC.modalTransitionStyle = .crossDissolve
+        var subVC = UIViewController()
+        
+        switch rowIndex {
+        case 0:
+            subVC = AboutUsVc()
+        default:
+            break
+        }
+        
+        switch willPresentVC {
+        case let vc as SideMenuVC:
+            vc.redirectToAboutUsVC = {vc.dismissVC()
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.5){
+                self.redirect(to: subVC)
+            }}
+        case let vc as AboutUsVc:
+            vc.redirectToSideMenuVC = {vc.dismissVC()
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.5){
+                self.redirect(to: SideMenuVC())
+            }}
+        default:
+            break
+        }
+        self.present(willPresentVC, animated: true, completion: nil)
     }
     
     // MARK: - Setup Collection

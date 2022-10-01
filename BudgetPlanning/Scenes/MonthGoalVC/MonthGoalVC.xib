@@ -28,10 +28,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVf-Of-IND">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="gou-FW-HSp">
-                                    <rect key="frame" x="10" y="5" width="394" height="1995"/>
+                                    <rect key="frame" x="10" y="5" width="394" height="1295"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LN-mt-QhJ" customClass="UIViewX" customModule="BudgetPlanning" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="394" height="66"/>
@@ -498,7 +498,7 @@
                                             </collectionViewFlowLayout>
                                         </collectionView>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="201" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HmC-aK-DfF">
-                                            <rect key="frame" x="10" y="649" width="374" height="1346"/>
+                                            <rect key="frame" x="10" y="649" width="374" height="646"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ODr-nE-R3m">
                                                 <size key="itemSize" width="128" height="128"/>
@@ -523,12 +523,12 @@
                                 <constraint firstItem="gou-FW-HSp" firstAttribute="top" secondItem="IVf-Of-IND" secondAttribute="top" constant="5" id="6pG-Dz-TJn"/>
                                 <constraint firstItem="gou-FW-HSp" firstAttribute="leading" secondItem="IVf-Of-IND" secondAttribute="leading" constant="10" id="dzd-dj-jHw"/>
                                 <constraint firstAttribute="trailing" secondItem="gou-FW-HSp" secondAttribute="trailing" constant="10" id="kPD-ps-DnD"/>
+                                <constraint firstAttribute="height" constant="1300" id="sPd-eb-kio"/>
                                 <constraint firstAttribute="bottom" secondItem="gou-FW-HSp" secondAttribute="bottom" id="xs4-vN-vSo"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="IVf-Of-IND" firstAttribute="height" secondItem="bVk-QF-lX0" secondAttribute="height" id="8HP-Ca-jLE"/>
                         <constraint firstItem="IVf-Of-IND" firstAttribute="centerX" secondItem="bVk-QF-lX0" secondAttribute="centerX" id="NNm-uR-fPu"/>
                         <constraint firstItem="IVf-Of-IND" firstAttribute="leading" secondItem="bVk-QF-lX0" secondAttribute="leading" id="QnF-oy-pt0"/>
                         <constraint firstItem="IVf-Of-IND" firstAttribute="top" secondItem="bVk-QF-lX0" secondAttribute="top" id="iv0-Uv-CTL"/>
