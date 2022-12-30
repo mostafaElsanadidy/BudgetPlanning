@@ -50,28 +50,34 @@ extension UIViewController{
         var renderingMode:UIImage.RenderingMode = .alwaysOriginal
           
         var height:CGFloat = 50
+        var lblText = ""
             switch selectedIndx{
             case 0:
-                height = 45
-                imageName = "budget"
+                height = 25
+                imageName = "budget3"
+                lblText = "Plans"
             case 1:
-                height = 40
+                height = 25
                 imageName = "doollar"
                 imageName = "budget"
                 imageName = "wallet2"
 //                imageName = "mybudget2"
+                lblText = "Wallet"
             case 2:
-                height = 45
+                height = 30
 //                imageName = "MOney-sign"
 //                imageName = "climb stairs"
                 imageName = "Growth-Icon"
-                imageName = "progress"
-                imageName = "target4"
+                imageName = "progresss"
+//                imageName = "target4"
+//                imageName = "Growth-Icon"
 //                imageName = "progress4"
+                lblText = "MonthGoal"
             case 3:
-                height = 65
+                height = 45
                 imageName = "target1"
 //                imageName = "budget planing"
+                lblText = "Goals"
             default:
                 height = 30
                 imageName = "MOney-sign"
@@ -83,7 +89,8 @@ extension UIViewController{
 //        view.layer.cornerRadius = 60/2
                                   
         let imageView = UIImageView.init(frame: CGRect.init(x: view.frame.size.width/2-height/2,y: view.frame.size.height/2-height/2, width: height, height: height))
-        
+//        imageView.backgroundColor = isSelectedState ? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0) : #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+//        imageView.layer.cornerRadius = imageView.frame.width/2
         
 //        var realColor = UIColor()
 //
@@ -93,42 +100,52 @@ extension UIViewController{
 //                realColor = #colorLiteral(red: 1, green: 0.6470588235, blue: 0.4039215686, alpha: 1)
 //              }
         
-        let imageColor = isSelectedState ? #colorLiteral(red: 0.5955441594, green: 0.6747867465, blue: 0.7344350815, alpha: 1) : #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        let imageColor = isSelectedState ?  #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 0.3769466577) : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
-        let image = isSelectedState ? UIImage(named: imageName)?.withTintColor(imageColor, renderingMode: renderingMode) : UIImage(named: imageName)
-//        let image = UIImage(named: imageName)?.withTintColor(imageColor, renderingMode: renderingMode)
+        
+//        let image = isSelectedState ? UIImage(named: imageName)?.withTintColor(imageColor, renderingMode: renderingMode) : UIImage(named: imageName)
+        let image = UIImage(named: imageName)?.withTintColor(imageColor, renderingMode: renderingMode)
 //        let image = UIImage(named: imageName)
                       
         imageView.image = image
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleToFill
 //        if selectedIndx == 1{
 //            imageView.contentMode = .scaleToFill
 //        }
-        
+        imageView.tintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+
         view.addSubview(imageView)
         
         //like as badgeView
-        if !isSelectedState{
+//        if !isSelectedState{
             
-            let label = UILabel(frame: CGRect(x: imageView.frame.origin.x+imageView.frame.width/2-10, y: imageView.frame.origin.y+imageView.frame.height+2, width: 20, height: 20))
-            if selectedIndx == 3{
-                label.frame.origin.y = imageView.frame.origin.y+imageView.frame.height-10
+            let label = UILabel(frame: CGRect(x: imageView.frame.origin.x+imageView.frame.width/2-10, y: imageView.frame.origin.y-20, width: view.frame.width, height: 30))
+            if selectedIndx == 3 {
+                label.frame.origin.y = imageView.frame.origin.y-15
             }
-        label.textAlignment = .center
-        label.textColor = .white
-        label.text = "●"
-        label.font = UIFont(name: label.font.fontName, size: 20)
-            label.isHidden = true
+            label.frame.origin.y = imageView.frame.height+imageView.frame.origin.y+5
+            if selectedIndx == 3 {
+                label.frame.origin.y = imageView.frame.height+imageView.frame.origin.y-5
+            }
+            label.frame.origin.x = view.frame.origin.x
+            label.textAlignment = .center
+        label.textColor = imageColor
+//        label.text = "●"
+            label.text = lblText
+//            label.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.font = UIFont(name: label.font.fontName, size: 15)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        
+//            label.isHidden = true
            // label.layer.cornerRadius = 20/2
-
             view.addSubview(label)
             view.bringSubviewToFront(label)
-        }
-        
-       
+            
+//        }
+//        view.backgroundColor = .brown
         
          return view.asImage().withRenderingMode(renderingMode)
-    
+        
     }
     
 }

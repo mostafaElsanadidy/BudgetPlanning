@@ -23,7 +23,7 @@ class FuturePurchasesCell: UICollectionViewCell {
     override func draw(_ rect: CGRect) {
        
 //        UIApplicationShortcutItem.init(type: <#T##String#>, localizedTitle: <#T##String#>)
-        if let imageView = self.viewWithTag(130){
+//        if let imageView = self.viewWithTag(130){
         //    imageView.layer.cornerRadius = 20
 //            imageView.clipsToBounds = true
             
@@ -37,15 +37,15 @@ class FuturePurchasesCell: UICollectionViewCell {
 //            let mask = CAShapeLayer()
 //            mask.path = path.cgPath
 //                imageView.layer.mask = borderLayer
-        }
+//        }
         
-        if let view = self.viewWithTag(120){
-            view.layer.cornerRadius = 8
-            view.layer.shadowPath = view.createRectangle()
-//            view.layer.mask = borderLayer
-//            view.roundCorners([.allCorners], radius: 30.0, borderColor: UIColor.white, borderWidth: 10.0)
-            
-        }
+//        if let view = self.viewWithTag(120){
+//            view.layer.cornerRadius = 8
+//            view.layer.shadowPath = view.createRectangle()
+////            view.layer.mask = borderLayer
+////            view.roundCorners([.allCorners], radius: 30.0, borderColor: UIColor.white, borderWidth: 10.0)
+//
+//        }
        
     }
     
@@ -61,14 +61,37 @@ class FuturePurchasesCell: UICollectionViewCell {
     func configureProgressBar(direction:ProgressBarDirection){
         self.progressBar.progressBarDirection = direction
 //        if progressBArDirection == .FromLeft{
-        let progress = 0.7
+        let progress = 0.61
         progressBar.progress = progress
+        progressBar.isLayerBordered = true
         progressBar.precentageLabel.text = "%\(Int(progress*100))"
+        print(progressBar.precentageLabel.frame.width)
+//        progressBar.precentageLabel.textColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
         progressBar.precentageLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        progressBar.precentageLabel.font = UIFont.systemFont(ofSize: 15, weight: .black)
-        progressBar.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+//        progressBar.precentageLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+////        progressBar.roundCorners(.allCorners, radius: 10, borderColor: .lightGray, borderWidth: 1)
+//        progressBar.precentageLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+//        progressBar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+//        progressBar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3977657091)
+        progressBar.color = #colorLiteral(red: 0.9960784314, green: 0.8039215686, blue: 0.8941176471, alpha: 1)
+        
         progressBar.color = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-//        FECDE4   E87AA4
+        
+        
+//        progressBar.precentageLabel.textColor = progressBar.progress > 0.6 ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) : #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+//
+//        progressBar.precentageLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        progressBar.precentageLabel.font = UIFont.systemFont(ofSize: 15
+                                                             , weight: .black)
+        progressBar.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 0.4)
+//        progressBar.backgroundColor = .white
+//        progressBar.color = #colorLiteral(red: 0.2588235294, green: 0.537254902, blue: 0.8784313725, alpha: 1)
+//        progressBar.color = .red
+//        3798DA 4289E0  4289E0  E28838
+//        progressBar.color = UIColor.white
+//        FECDE4   E87AA4 E87AA4
+        
+        
         
 //        }
 //        else{

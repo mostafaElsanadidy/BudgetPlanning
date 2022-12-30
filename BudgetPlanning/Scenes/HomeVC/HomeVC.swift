@@ -15,11 +15,78 @@ class HomeVC: UIViewController {
     @IBOutlet weak var containerView: UIViewX!
     var selectedIndex = 0
     
+    func timeConversion(s: String) -> String {
+        // Write your code here
+       
+    var newString = s
+    switch newString{
+        case let s where s.contains("PM"):
+    let formatStrArr = s.components(separatedBy: "PM")
+    print(formatStrArr)
+    var timeStrArr = formatStrArr[0].components(separatedBy: ":")
+    if var hour = Int(timeStrArr[0]){
+     hour = hour+12 == 24 ? hour : hour+12
+     timeStrArr[0] = "\(hour)"
+    }
+    newString = timeStrArr.joined(separator: ":")+"PM"
+
+    case let s where s.contains("AM"):
+    let formatStrArr = s.components(separatedBy: "AM")
+    print(formatStrArr)
+    var timeStrArr = formatStrArr[0].components(separatedBy: ":")
+    if var hour = Int(timeStrArr[0]){
+     hour = hour-12
+     timeStrArr[0] = "\(hour)"
+     if hour < 10{
+         timeStrArr[0] = "0\(hour)"
+     }
+    }
+    newString = timeStrArr.joined(separator: ":")+"AM"
+        default:
+        return newString
+    }
+    return newString
+    }
+
+    func pangrams(s: String) -> String {
+        // Write your code here
+        var isPangram = ""
+        
+    var alphabets = (97...125).map({Character(UnicodeScalar($0))})
+        
+     alphabets = (0..<26).map({Character(UnicodeScalar("A".unicodeScalars.first!.value + $0)!)})
+        alphabets = (90...97).map({Character(UnicodeScalar($0))})
+    print(alphabets,(" ".unicodeScalars.first!.value))
+        let arr = [0...8]
+    for letter in alphabets{
+        print(letter,letter.unicodeScalars.first!.value)
+        guard s.lowercased().contains(letter)
+        else{
+            isPangram = "not pangram"
+            break}
+            isPangram = "pangram"
+    }
+    return isPangram
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
         // Do any additional setup after loading the view.
+        let oldString = "Hello, playground"
+        let newString = oldString.prefix(4) + "0" + oldString.dropFirst(5)
+        print(newString)
+        
+        var s = "12:01:00PM"
+        s = "07:05:45PM"
+        s = "12:40:22AM"
+        print(timeConversion(s: s))
+        print(pangrams(s: "We promptly judged antique ivory buckles for the next prize"))
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        sideMenuView.isUserInteractionEnabled = true
+        sideMenuView.addGestureRecognizer(tapGestureRecognizer)
 //        containerView.bringSubviewToFront(sideMenuView)
 //        sideMenuView.backgroundColor = .lightGray
         }
@@ -28,9 +95,8 @@ class HomeVC: UIViewController {
 
     @objc func imageTapped()
     {
-        
         // Your action
-        redirectToSideMenu()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "showSideMenu"), object: nil)
     }
     
     
@@ -53,49 +119,9 @@ class HomeVC: UIViewController {
         tabBarItem.selectedImage = configureTabBarImage(with: selectedIndex)
         tabBarController?.selectedIndex = selectedIndex
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
-        sideMenuView.isUserInteractionEnabled = true
-        sideMenuView.addGestureRecognizer(tapGestureRecognizer)
-        
     }
     
-    func redirectToSideMenu() {
-        let sideMenuVC = SideMenuVC()
-        redirect(to: sideMenuVC)
-//        SideMenuVC.orderDetailsViewModel.selectedMeal.value = tuple.selectedMeal
-//        orderDetailsVC.orderDetailsViewModel.selectedMealValueDidChanged = tuple.didTapped
-//        self.tabBarController?.pushViewController(VC:sideMenuVC)
-    }
-    func redirect(to willPresentVC:UIViewController,  rowIndex : Int = 0) {
-        
-//            let sideMenuVC = SideMenuVC()
-            willPresentVC.modalPresentationStyle = .overFullScreen
-            willPresentVC.modalTransitionStyle = .crossDissolve
-        var subVC = UIViewController()
-        
-        switch rowIndex {
-        case 0:
-            subVC = AboutUsVc()
-        default:
-            break
-        }
-        
-        switch willPresentVC {
-        case let vc as SideMenuVC:
-            vc.redirectToAboutUsVC = {vc.dismissVC()
-            DispatchQueue.main.asyncAfter(deadline: .now()+0.5){
-                self.redirect(to: subVC)
-            }}
-        case let vc as AboutUsVc:
-            vc.redirectToSideMenuVC = {vc.dismissVC()
-            DispatchQueue.main.asyncAfter(deadline: .now()+0.5){
-                self.redirect(to: SideMenuVC())
-            }}
-        default:
-            break
-        }
-        self.present(willPresentVC, animated: true, completion: nil)
-    }
+   
     
     // MARK: - Setup Collection
     private func setup_Collection() {

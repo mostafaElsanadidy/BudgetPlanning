@@ -11,7 +11,9 @@ class AboutMyBudgetVC: UIViewController {
 
     @IBOutlet weak var precentagesCollectionView: SelfSizingCollectionView!
     @IBOutlet weak var detailsBttn: UIButton!
+    @IBOutlet weak var gaugeView: GaugeView!
     @IBOutlet weak var circularProgress: CircularProgressView!
+    @IBOutlet weak var sideMenuView: UIView!
     var selectedIndex = 1
     var endIndex = 0
    
@@ -57,6 +59,12 @@ class AboutMyBudgetVC: UIViewController {
 //        for (index,precentage) in precentages.enumerated() {
 //            colors[index] = UIColor(red: 0, green: 0, blue: 255, alpha: 1-precentage)
 //        }
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+//        sideMenuView.backgroundColor = .red
+        sideMenuView.isUserInteractionEnabled = true
+        sideMenuView.addGestureRecognizer(tapGestureRecognizer)
+        
+        
         setup_Collection()
         arrOfValues = [(fromValue:CGFloat,value:CGFloat,endIndex:Int)](repeating: (fromValue:CGFloat(0.0),value:CGFloat(0.0),endIndex:0), count: precentages.count)
         condition = (self.savedBarDirection == .clockwise)
@@ -64,7 +72,26 @@ class AboutMyBudgetVC: UIViewController {
         endIndex = 0
         configureCircularProgressBar()
         
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            UIView.animate(withDuration: 1) {
+                self.gaugeView.value = 33
+            }
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            UIView.animate(withDuration: 1) {
+                self.gaugeView.value = 66
+            }
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            UIView.animate(withDuration: 1) {
+                self.gaugeView.value = 100
+            }
+        }
     }
+    
     
     private func setup_Collection() {
         precentagesCollectionView.delegate = self
@@ -88,6 +115,7 @@ class AboutMyBudgetVC: UIViewController {
             print(vcIndex)
             self.selectedIndex = vcIndex
 //            tabBar.setNeedsDisplay()
+            
         }
         
         
@@ -101,7 +129,7 @@ class AboutMyBudgetVC: UIViewController {
         
 //        precentagesCollectionView.reloadData()
 //        view.viewWithTag(100)?.isHidden = true
-        precentagesCollectionView.isHidden = false
+//        precentagesCollectionView.isHidden = precentagesCollectionView.isHidden ? true : false
         detailsBttn.layer.cornerRadius = 10
 //        configureCircularProgressBar()
        
@@ -112,6 +140,11 @@ class AboutMyBudgetVC: UIViewController {
 //        stopTimer()
 //        self.gapSize += 0.01
         print("mkmklmlk \(self.gapSize)")
+
+    }
+    
+    @objc func imageTapped(){
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "showSideMenu"), object: nil)
 
     }
     
@@ -144,12 +177,14 @@ class AboutMyBudgetVC: UIViewController {
         
 //        let endRangeCondition:Bool = condition ? (endIndex <= precentages.count-1) : (endIndex >= 0)
         print(endIndex)
+        
         guard endIndex <= arrOfValues.count-1 else{
             
 //            view.viewWithTag(100)?.isHidden = false
             
 //            precentagesCollectionView.reloadData()
             precentagesCollectionView.isHidden = false
+            gaugeView.isHidden = false
             stopTimer()
 //            timer?.invalidate()
             

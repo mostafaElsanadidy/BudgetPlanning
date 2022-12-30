@@ -8,7 +8,6 @@
 import UIKit
 
 
-
 enum ProgressBarDirection {
     case FromRight
     case FromLeft
@@ -20,6 +19,11 @@ class SecondProgressBar: UIView {
     @IBInspectable var color: UIColor? = .gray
     private let progressLayer = CALayer()
     var progressBarDirection:ProgressBarDirection = .FromLeft{
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    var isLayerBordered = false{
         didSet{
             setNeedsDisplay()
         }
@@ -40,7 +44,6 @@ class SecondProgressBar: UIView {
         labl.minimumScaleFactor = 0.5
 //
         labl.textAlignment = .center
-        
         return labl
     }()
     
@@ -86,9 +89,16 @@ class SecondProgressBar: UIView {
         // Drawing code
         
         let backgroundMask = CAShapeLayer()
-        backgroundMask.path = UIBezierPath.init(roundedRect: rect, cornerRadius: rect.height * 0.7).cgPath
+        backgroundMask.path = UIBezierPath.init(roundedRect: rect, cornerRadius: rect.height * 0.5).cgPath
+//        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         layer.mask = backgroundMask
-        
+        if isLayerBordered{
+//        layer.borderColor = UIColor.lightGray.cgColor
+//            layer.borderColor = #colorLiteral(red: 0.2588235294, green: 0.537254902, blue: 0.8784313725, alpha: 1)
+            layer.borderColor = #colorLiteral(red: 0.9960784314, green: 0.8039215686, blue: 0.8941176471, alpha: 1)
+//            layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 1
+        layer.cornerRadius = rect.height*0.5}
         var progressRect = CGRect.init(origin: .zero, size: CGSize.init(width: rect.width * progress, height: rect.height))
         progressRect.origin.x = progressBarDirection == .FromLeft ? 0 : rect.width * (1-progress)
 //

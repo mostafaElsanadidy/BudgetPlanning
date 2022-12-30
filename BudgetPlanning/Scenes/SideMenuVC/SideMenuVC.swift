@@ -13,7 +13,8 @@ class SideMenuVC: UIViewController {
     @IBOutlet weak var dismissBtn: UIButton!
     @IBOutlet weak var containerView: UIView!
     
-    @IBOutlet weak var sideMenuCollection: UICollectionView!
+    @IBOutlet weak var sideMenuCollection: SelfSizingCollectionView!
+    
     var redirectToAboutUsVC:()->() = {}
     
     
@@ -43,10 +44,11 @@ class SideMenuVC: UIViewController {
                 set_Blur(containerView: containerView)
            //     bodyView.layer.maskedCorners = [.layerMinXMinYCorner , .layerMaxXMinYCorner]
                 bodyView.layer.cornerRadius = 15
-                let image = #imageLiteral(resourceName: "plus-1").withRenderingMode(.alwaysTemplate)
-                dismissBtn.setBackgroundImage(image, for: .normal)
-                dismissBtn.tintColor = #colorLiteral(red: 1, green: 0.7333333333, blue: 0, alpha: 1)
-                bodyView.transform = CGAffineTransform(translationX: -800, y: 0)
+             let image = #imageLiteral(resourceName: "plus-1").withTintColor(.white, renderingMode: .alwaysTemplate)
+            
+             dismissBtn.setImage(image, for: .normal)
+                dismissBtn.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                bodyView.transform = CGAffineTransform(translationX: 0, y: -800)
              
             }
 
@@ -83,7 +85,7 @@ func dismissVC(with bttnTag: Int = 0) {
 //    }
     
     animateOut(animation: {[weak self] in
-                          self?.bodyView.transform = CGAffineTransform(translationX: -800, y: 0)
+                          self?.bodyView.transform = CGAffineTransform(translationX: 0, y: -800)
                       }, completion: {[weak self] (_) in
                                   self?.dismiss(animated: false, completion: nil)
                               })

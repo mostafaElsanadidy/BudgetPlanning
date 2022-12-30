@@ -13,6 +13,7 @@ class MonthGoalVC: UIViewController {
     @IBOutlet weak var progressBarII: CircularProgressView!
     @IBOutlet weak var PaymentsCollection: UICollectionView!
     @IBOutlet weak var optionCollection: UICollectionView!
+//    @IBOutlet weak var sideMenuView: UIView!
     @IBOutlet weak var todayGoalProgressBar: SecondProgressBar!
     
     let savedBarDirection : SavedBarDirection = .counterclockwise
@@ -37,6 +38,13 @@ class MonthGoalVC: UIViewController {
         todayGoalProgressBar.precentageLabel.font = UIFont.systemFont(ofSize: 12, weight: .black)
         todayGoalProgressBar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3977657091)
         todayGoalProgressBar.color = .white
+        
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        
+//        sideMenuView.backgroundColor = .red
+//        sideMenuView.isUserInteractionEnabled = true
+//        sideMenuView.addGestureRecognizer(tapGestureRecognizer)
+        
 //        let date = Date().
 //        let savedBarDirection : SavedBarDirection = .counterclockwise
 //
@@ -47,6 +55,11 @@ class MonthGoalVC: UIViewController {
 //        configureProgressBar(progressBar: progressBarII, savedBarDirection: savedBarDirection)
       
     }
+    
+//    @objc func imageTapped(){
+//        NotificationCenter.default.post(name: Notification.Name(rawValue: "showSideMenu"), object: nil)
+//
+//    }
 
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)

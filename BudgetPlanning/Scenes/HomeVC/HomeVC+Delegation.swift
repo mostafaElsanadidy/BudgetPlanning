@@ -17,7 +17,7 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
     var heightPerItem:CGFloat = 0
     
     
-    heightPerItem = 240
+    heightPerItem = 250
         edgeInset = 10
         numberOfItemsInRow = 1
       //  getFromApiData(recipeHit: arrOfSeparateOrders[indexPath.row])

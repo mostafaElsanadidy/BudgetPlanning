@@ -21,6 +21,9 @@ class TabbarController: UITabBarController,UITabBarControllerDelegate {
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(redirectToSideMenu), name: Notification.Name(rawValue: "showSideMenu"), object: nil)
+        
         self.delegate = self
         self.navigationController?.navigationBar.isHidden = true
         
@@ -87,6 +90,7 @@ class TabbarController: UITabBarController,UITabBarControllerDelegate {
 //            tabBar.selectedIndex = vcIndex
 //            tabBar.setNeedsDisplay()
 //        }
+        
     }
     
     func repositionBadge(tabIndex: Int){
@@ -151,4 +155,44 @@ class TabbarController: UITabBarController,UITabBarControllerDelegate {
 //            tabBar.setNeedsDisplay()
         }
       }
+    
+    @objc func redirectToSideMenu() {
+        let sideMenuVC = SideMenuVC()
+        redirect(to: sideMenuVC)
+        
+        
+//        SideMenuVC.orderDetailsViewModel.selectedMeal.value = tuple.selectedMeal
+//        orderDetailsVC.orderDetailsViewModel.selectedMealValueDidChanged = tuple.didTapped
+//        self.tabBarController?.pushViewController(VC:sideMenuVC)
+    }
+    func redirect(to willPresentVC:UIViewController,  rowIndex : Int = 0) {
+        
+//            let sideMenuVC = SideMenuVC()
+            willPresentVC.modalPresentationStyle = .overFullScreen
+            willPresentVC.modalTransitionStyle = .crossDissolve
+        var subVC = UIViewController()
+        
+        switch rowIndex {
+        case 0:
+            subVC = AboutUsVc()
+        default:
+            break
+        }
+        
+        switch willPresentVC {
+        case let vc as SideMenuVC:
+            vc.redirectToAboutUsVC = {vc.dismissVC()
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.5){
+                self.redirect(to: subVC)
+            }}
+        case let vc as AboutUsVc:
+            vc.redirectToSideMenuVC = {vc.dismissVC()
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.5){
+                self.redirect(to: SideMenuVC())
+            }}
+        default:
+            break
+        }
+        self.present(willPresentVC, animated: true, completion: nil)
+    }
 }

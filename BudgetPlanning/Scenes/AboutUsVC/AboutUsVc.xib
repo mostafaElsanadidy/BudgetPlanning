@@ -48,13 +48,16 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcq-BO-jDj">
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcq-BO-jDj">
                             <rect key="frame" x="0.0" y="0.0" width="70" height="63"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="70" id="JdH-Kg-PhI"/>
                                 <constraint firstAttribute="width" secondItem="dcq-BO-jDj" secondAttribute="height" multiplier="1:0.9" id="wPS-xw-kL6"/>
                             </constraints>
                             <state key="normal" backgroundImage="plus-1"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="plus-1" imageContentMode="center"/>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="dismissVC:" destination="-1" eventType="touchUpInside" id="VgU-i4-ecf"/>
                             </connections>
@@ -65,7 +68,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfX-Uv-URl" customClass="UIViewX" customModule="BudgetPlanning" customModuleProvider="target">
                                     <rect key="frame" x="115" y="0.0" width="124" height="124"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1399" translatesAutoresizingMaskIntoConstraints="NO" id="8pq-Iu-HtE">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money_with_wings" translatesAutoresizingMaskIntoConstraints="NO" id="8pq-Iu-HtE">
                                             <rect key="frame" x="15" y="5" width="94" height="114"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <userDefinedRuntimeAttributes>
@@ -166,9 +169,9 @@
         </view>
     </objects>
     <resources>
-        <image name="Group 1399" width="150.5" height="75"/>
         <image name="facebook" width="40" height="40"/>
         <image name="instagram" width="40" height="40"/>
+        <image name="money_with_wings" width="595" height="595"/>
         <image name="plus-1" width="28.5" height="28.5"/>
         <image name="twitter" width="40" height="40"/>
         <systemColor name="labelColor">
