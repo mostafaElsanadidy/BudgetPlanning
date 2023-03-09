@@ -94,6 +94,9 @@
                 <constraint firstAttribute="bottom" secondItem="lGa-BN-9u7" secondAttribute="bottom" id="bvq-TZ-Yr7"/>
                 <constraint firstItem="lGa-BN-9u7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="qmJ-i1-dVJ"/>
             </constraints>
+            <connections>
+                <outlet property="paymentImagesView" destination="LgX-WR-hsF" id="ANS-3Y-QYc"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
         </collectionViewCell>
     </objects>

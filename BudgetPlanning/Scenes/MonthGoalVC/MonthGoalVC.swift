@@ -21,6 +21,7 @@ class MonthGoalVC: UIViewController {
     var monthName:String = ""
     var selectedIndex = 0
     var days:[String] = []
+    var images = ["vegetables7","fruits","taxi","medicine"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

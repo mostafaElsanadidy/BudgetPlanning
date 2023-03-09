@@ -9,6 +9,7 @@ import UIKit
 
 class PaymentsCell: UICollectionViewCell {
 
+    @IBOutlet weak var paymentImagesView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

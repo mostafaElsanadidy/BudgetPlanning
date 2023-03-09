@@ -30,6 +30,9 @@ extension MonthGoalVC:UICollectionViewDataSource{
         if let cell = cell as? DayNumCell{
             cell.dayNameLabel.text = days[indexPath.row]
         }
+        if let cell = cell as? PaymentsCell{
+            cell.paymentImagesView.image = UIImage.init(named: images[indexPath.row%images.count])
+        }
                // as? FuturePurchasesCell else{return UICollectionViewCell()}
 //        if let viewx = cell.viewWithTag(130){
 //            viewx.backgroundColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
